@@ -1,0 +1,70 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="billing-full-width">
+          <input [(ngModel)]="model.balance" name="balance" mdInput placeholder="Total Outstanding Amount (Tableau)" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="billing-full-width">
+          <input [(ngModel)]="model.due" name="due" mdInput placeholder="Amount Due" >
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <br>
+        <md-select [(ngModel)]="model.cycle" name="cycle" placeholder="Billing Cycle" class="billing-full-width">
+          <md-option *ngFor="let cycle of cycles" [value]="cycle.value">{{ cycle.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="billing-full-width">
+          <input [(ngModel)]="model.account" name="account" mdInput placeholder="Account Number Requested" >
+        </md-input-container>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-select [(ngModel)]="model.verified" name="verified" placeholder="I.D Verified" class="billing-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <br>
+    <md-input-container class="billing-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.comments" name="comments" placeholder="Additional Comments"></textarea>
+    </md-input-container>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{title}} Template Preview</md-card-title>
+      <md-card-content>
+        <md-input-container class="billing-full-width">
+          <textarea #billing mdInput mdTextareaAutosize readonly>Total Outstanding Amount (Tableau): {{model.balance}}
+
+Amount Due: {{model.due}}
+
+Bill Cycle: {{model.cycle}}
+
+Account Number Requested: {{model.account}}
+
+I.D. Verified: {{model.verified}}
+
+Additional Comments: {{model.comments}}
+          </textarea>
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button [ngxClipboard]='billing'>COPY</button>
+        <button md-button (click)='reset()'>CLEAR</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

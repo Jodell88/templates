@@ -1,0 +1,54 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-select multiple [(ngModel)]="model.addon" name="addon" placeholder="Add-on Requested" class="addon-full-width">
+          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-select [(ngModel)]="model.promotion" name="promotion" placeholder="Promotional Period" class="addon-full-width">
+          <md-option *ngFor="let promotion of promotions" [value]="promotion.value">{{ promotion.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="addon-full-width">
+          <input [(ngModel)]="model.basePackage" name="package" mdInput placeholder="Base Package" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <br>
+        <md-select [(ngModel)]="model.verified" name="verified" placeholder="I.D Verified" class="addon-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{title}} Template Preview</md-card-title>
+      <md-card-content>
+        <md-input-container class="addon-full-width">
+          <textarea #addon mdInput mdTextareaAutosize readonly>Add-on Requested: {{model.addon}}
+
+Promotional Period: {{model.promotion}}
+
+Base Package: {{model.basePackage}}
+
+I.D. Verified: {{model.verified}}
+          </textarea>
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button [ngxClipboard]='addon'>COPY</button>
+        <button md-button (click)="reset()">CLEAR</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

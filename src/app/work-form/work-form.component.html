@@ -1,0 +1,42 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <md-input-container class="work-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.summary" name="summary" placeholder="Summary"></textarea>
+    </md-input-container>
+    <md-input-container class="work-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.history" name="history" placeholder="History"></textarea>
+    </md-input-container>
+    <md-input-container class="work-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.results" name="results" placeholder="Test Results"></textarea>
+    </md-input-container>
+    <md-input-container class="work-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.recommendations" name="recommendations" placeholder="Recommendations"></textarea>
+    </md-input-container>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{title}} Template Preview</md-card-title>
+      <md-card-content>
+        <md-input-container class="work-full-width">
+          <textarea #work mdInput mdTextareaAutosize readonly>Summary: {{model.summary}}
+
+History: {{model.history}}
+
+Test Results: {{model.results}}
+
+Recommendations: {{model.recommendations}}
+          </textarea>
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button [ngxClipboard]='work'>COPY</button>
+        <button md-button (click)="reset()">CLEAR</button>
+      </md-card-actions>
+    </md-card>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<md-toolbar color="primary">
+  <span>{{ title }} </span>
+</md-toolbar>
+
+<md-sidenav-container fullscreen>
+  <md-sidenav mode="side" opened="true">
+    <md-nav-list *ngFor="let template of templates">
+      <a md-list-item  [routerLink]= template.url>{{ template.name }}</a>
+    </md-nav-list>
+    <!-- <span *ngFor="let template in Templates">{{ template.name }} Template</span> -->
+  </md-sidenav>
+  <div class="my-content"><router-outlet></router-outlet></div>
+</md-sidenav-container>

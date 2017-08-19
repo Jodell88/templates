@@ -1,0 +1,90 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="updown-full-width">
+          <input [(ngModel)]="model.oldBundle" name="oldBundle" mdInput placeholder="Existing BND#" >
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="updown-full-width">
+          <input [(ngModel)]="model.newBundle" name="newBundle" mdInput placeholder="New Package Requested" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <br>
+        <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)" class="updown-full-width">
+          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-select [(ngModel)]="model.stb" name="stb" placeholder="Additonal STB (8083)" class="updown-full-width">
+          <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-select [(ngModel)]="model.pvr" name="pvr" placeholder="Additonal PVR (9000)" class="updown-full-width">
+          <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <br>
+        <md-select [(ngModel)]="model.onsite" name="onsite" placeholder="Requires Onsite Activation" class="updown-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="updown-full-width">
+          <input [(ngModel)]="model.order" name="workorder" mdInput placeholder="Work Order#" >
+        </md-input-container>
+      </div>
+    </div>
+
+    <div fxLayout="row">
+      <md-input-container class="updown-full-width">
+        <textarea mdInput mdTextareaAutosize [(ngModel)]="model.info" name="info" placeholder="Any Additional Info"></textarea>
+      </md-input-container>
+    </div>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{ title }} Template Preview</md-card-title>
+        <md-card-content>
+          <md-input-container class="updown-full-width">
+            <textarea #updown mdInput mdTextareaAutosize readonly>Existing BND#: {{model.oldBundle}}
+
+New Package Requested: {{model.newBundle}}
+
+Add-on Packages: {{model.addons}}
+
+Additional Boxes (8083): {{model.stb}}
+
+Additional Boxes (9000): {{model.pvr}}
+
+Onsite Activation Required: {{model.onsite}}
+
+Work Order#: {{model.order}}
+
+Additional Information: {{model.info}}
+            </textarea>
+          </md-input-container>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button [ngxClipboard]='updown'>COPY</button>
+          <button md-button (click)="reset()">CLEAR</button>
+        </md-card-actions>
+    </md-card>
+  </div>
+</div>

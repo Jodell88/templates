@@ -1,0 +1,62 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxlayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex>
+        <br>
+        <md-select [(ngModel)]="user.title" name="title" placeholder="Title" class="highspeed-full-width">
+          <md-option *ngFor="let title of titles" [value]="title.value">{{ title.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex>
+        <md-input-container class="highspeed-full-width">
+          <input [(ngModel)]="user.firstname" name="firstname" mdInput placeholder="Firstname" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex>
+        <md-input-container class="highspeed-full-width">
+          <input [(ngModel)]="user.lastname" name="lastname" mdInput placeholder="Lastname" >
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <md-input-container class="highspeed-full-width">
+        <input [(ngModel)]="model.cusname" name="cusname" mdInput placeholder="Customer's Name" >
+      </md-input-container>
+    </div>
+    <div fxLayout="row">
+      <md-input-container class="highspeed-full-width">
+        <textarea mdInput mdTextareaAutosize [(ngModel)]="model.info" name="info" placeholder="Response"></textarea>
+      </md-input-container>
+    </div>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{title}} Template Preview</md-card-title>
+      <md-card-content>
+        <md-input-container class="highspeed-full-width">
+          <textarea #highspeed mdInput mdTextareaAutosize readonly>Dear {{model.cusname}},
+
+Thank you for contacting us at Massy Communications.
+
+My name is {{user.title}} {{user.lastname}} and I would be assisting with your query.
+
+{{model.info}}
+
+Thank you for choosing Massy Communications.
+
+Kind regards,
+{{user.firstname}} {{user.lastname}} on behalf of Massy Communications Customer Care Team
+          </textarea>
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button [ngxClipboard]='highspeed'>COPY</button>
+        <button md-button (click)="reset()">CLEAR</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

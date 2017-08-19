@@ -1,0 +1,150 @@
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-select [(ngModel)]="model.internet" name="internet" placeholder="Is the Internet service affected?" class="technical-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-select [(ngModel)]="model.iptv" name="iptv" placeholder="Is the IPTV service affected?" class="technical-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.serial" name="serial" mdInput placeholder="ONT Serial Number" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date issue first surfaced?">
+          <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
+        </md-input-container>
+        <md-datepicker #myDatepicker></md-datepicker>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-select multiple [(ngModel)]="model.profile" name="profile" placeholder="WAN Profiles" class="technical-full-width">
+          <md-option *ngFor="let profile of profiles" [value]="profile.value">{{ profile.value }}</md-option>
+        </md-select>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-select [(ngModel)]="model.routes" name="routes" placeholder="Routes on ONT?" class="technical-full-width">
+          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <br>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.description" name="description" placeholder="Description of the issue"></textarea>
+    </md-input-container>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.steps" name="steps" placeholder="Steps taken to resolve the issue"></textarea>
+    </md-input-container>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.results" name="results" placeholder="Results of steps taken"></textarea>
+    </md-input-container>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.stb" name="stb" placeholder="STB MAC Information"></textarea>
+    </md-input-container>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.alarms" name="alarms" placeholder="Tableau / Alarm Analysis"></textarea>
+    </md-input-container>
+    <md-input-container class="technical-full-width">
+      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.attachments" name="attachments" placeholder="Attachments (DLO/AMSLogs screenshots)"></textarea>
+    </md-input-container>
+    <h4 class="mat-h4">Customer network setup details:</h4>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.port1" name="port1" mdInput placeholder="Port 1" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.port2" name="port2" mdInput placeholder="Port 2" >
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.port3" name="port3" mdInput placeholder="Port 3" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.port4" name="port4" mdInput placeholder="Port 4" >
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.ghz24" name="ghz24" mdInput placeholder="2.4 Ghz" >
+        </md-input-container>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <md-input-container class="technical-full-width">
+          <input [(ngModel)]="model.ghz5" name="ghz5" mdInput placeholder="5 Ghz" >
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+    <md-card>
+      <md-card-title>{{title}} Template Preview</md-card-title>
+      <md-card-content>
+        <md-input-container class="technical-full-width">
+          <textarea #technical mdInput mdTextareaAutosize readonly>Is the Internet service affected?: {{model.internet}}
+
+Is the IPTV service affected?: {{model.iptv}}
+
+Description of the issue: {{model.description}}
+
+Date when the issue first surfaced: {{model.date}}
+
+Steps taken to resolve the issue: {{model.steps}}
+
+Results of the steps taken: {{model.results}}
+
+ONT Serial Number: {{model.serial}}
+
+STB MAC Information: {{model.stb}}
+
+Routes on the ONT: {{model.routes}}
+
+WAN Profiles: {{model.profile}}
+
+Customer network setup details:
+Port 1: {{model.port1}}
+Port 2: {{model.port2}}
+Port 3: {{model.port3}}
+Port 4: {{model.port4}}
+2.4 Ghz: {{model.ghz24}}
+5 Ghz: {{model.ghz5}}
+
+Tableau / Alarm Analysis: {{model.alarms}}
+
+Attachments: {{model.attachments}}
+          </textarea>
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button [ngxClipboard]='technical'>COPY</button>
+        <button md-button (click)="reset()">CLEAR</button>
+      </md-card-actions>
+    </md-card>
+
+  </div>
+</div>
