@@ -112,9 +112,9 @@ New Package Requested: {{model.newPackage}}
 
 Add-on Packages: {{model.newAddons}}
 
-Date for new install: {{model.installDate}}
+Date for new install: {{model.installDate | date: 'mediumDate'}}
 
-Requested Date for removal: {{model.removalDate}}
+Requested Date for removal: {{model.removalDate | date: 'mediumDate'}}
 
 Bundle Number to cancelled: {{model.bundle}}
 

@@ -112,7 +112,7 @@ Is the IPTV service affected?: {{model.iptv}}
 
 Description of the issue: {{model.description}}
 
-Date when the issue first surfaced: {{model.date}}
+Date when the issue first surfaced: {{model.date | date: 'mediumDate'}}
 
 Steps taken to resolve the issue: {{model.steps}}
 

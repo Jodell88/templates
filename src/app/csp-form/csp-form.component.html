@@ -41,7 +41,7 @@
         <md-input-container class="csp-full-width-height">
           <textarea #csp mdInput mdTextareaAutosize readonly>What is the reported Service Issue?: {{model.issue}}
 
-Date when issue first surfaced: {{model.date}}
+Date when issue first surfaced: {{model.date | date: 'mediumDate'}}
 
 IPTV Only: {{model.iptv}}
 
