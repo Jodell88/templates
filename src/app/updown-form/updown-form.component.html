@@ -19,7 +19,7 @@
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
-        <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)" class="updown-full-width">
+        <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additional Packages (Movies, etc)" class="updown-full-width">
           <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
         </md-select>
       </div>
@@ -27,12 +27,12 @@
     <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-select [(ngModel)]="model.stb" name="stb" placeholder="Additonal STB (8083)" class="updown-full-width">
+        <md-select [(ngModel)]="model.stb" name="stb" placeholder="Additional STB (8083)" class="updown-full-width">
           <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
         </md-select>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-select [(ngModel)]="model.pvr" name="pvr" placeholder="Additonal PVR (9000)" class="updown-full-width">
+        <md-select [(ngModel)]="model.pvr" name="pvr" placeholder="Additional PVR (9000)" class="updown-full-width">
           <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
         </md-select>
       </div>
