@@ -27,10 +27,10 @@ export class UpdownFormComponent implements OnInit {
 
   title = "Upgrade / Downgrade"
 
-  model = new Durq("")
+  model = new Durq()
 
   reset(){
-    this.model = new Durq("")
+    this.model = new Durq()
   }
 
   addons = [
@@ -44,13 +44,13 @@ export class UpdownFormComponent implements OnInit {
     {value: " MaxPak"},
     {value: " Premium Sports"},
     {value: " Watch Adult"},
-  ]
+  ];
 
-  count = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+  count = [0,1,2,3,4,5,6,7,8,9,10,11,12];
 
   options = [
     {value: "No"},
     {value: "Yes"}
-  ]
+  ];
 
 }
