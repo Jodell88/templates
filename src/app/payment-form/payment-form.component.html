@@ -43,7 +43,7 @@
         <md-input-container class="payment-full-width">
           <textarea #payment mdInput mdTextareaAutosize readonly>Invoice Number: {{model.invoice}}
 
-Date Invoice Paid: {{model.date}}
+Date Invoice Paid: {{model.date | date: 'mediumDate'}}
 
 Amount Paid: ${{model.amount}}
 
