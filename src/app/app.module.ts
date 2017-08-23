@@ -10,7 +10,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
 import { AppComponent } from './app.component';
-import { BillCycleComponent } from './bill-cycle.component';
 import { MyDateAdapter } from './customdateadapter';
 import { CustomReuseStrategy} from './customreusestrategy';
 import { TechnicalFormComponent } from './technical-form/technical-form.component';
@@ -30,7 +29,6 @@ import { RebateFormComponent } from './rebate-form/rebate-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BillCycleComponent,
     TechnicalFormComponent,
     ForwardingFormComponent,
     LoyaltyFormComponent,
