@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-headerbar',
+  selector: 'headerbar',
   templateUrl: './headerbar.component.html',
   styleUrls: ['./headerbar.component.css']
 })
@@ -11,5 +11,7 @@ export class HeaderbarComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input('title') titleName: string; 
 
 }
