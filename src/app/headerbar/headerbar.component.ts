@@ -14,4 +14,8 @@ export class HeaderbarComponent implements OnInit {
 
   @Input('title') titleName: string; 
 
+  feederMap(){
+    window.open("https://www.google.com/maps/d/viewer?mid=1XII2dGmmObI_xvcXV2ARWTvPuaY", "_blank")
+  }
+
 }

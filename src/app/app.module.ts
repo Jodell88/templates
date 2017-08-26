@@ -5,7 +5,8 @@ import { RouterModule,  RouteReuseStrategy } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule, MdToolbarModule,
          MdSidenavModule, MdListModule, MdInputModule, MdCardModule, MdDatepickerModule,
-         MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule } from '@angular/material';
+         MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule, MdIconModule,
+         MdMenuModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -109,7 +110,7 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
     MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule,
     MdToolbarModule, MdSidenavModule, MdListModule, MdInputModule,
     MdCardModule, MdDatepickerModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule
+    MdTooltipModule, MdIconModule, MdMenuModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'us'},
