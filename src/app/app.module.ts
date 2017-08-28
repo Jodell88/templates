@@ -13,6 +13,7 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { AppComponent } from './app.component';
 import { MyDateAdapter } from './customdateadapter';
 import { CustomReuseStrategy} from './customreusestrategy';
+import { BillingCycleService} from './billing-cycle.service';
 import { TechnicalFormComponent } from './technical-form/technical-form.component';
 import { ForwardingFormComponent } from './forwarding-form/forwarding-form.component';
 import { LoyaltyFormComponent } from './loyalty-form/loyalty-form.component';
@@ -115,7 +116,8 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
   providers: [
     {provide: LOCALE_ID, useValue: 'us'},
     {provide: DateAdapter, useClass: MyDateAdapter},
-    {provide: RouteReuseStrategy, useClass: CustomReuseStrategy}
+    {provide: RouteReuseStrategy, useClass: CustomReuseStrategy},
+    BillingCycleService
   ],
   bootstrap: [AppComponent]
 })
