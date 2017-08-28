@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { BillCycleComponent } from './bill-cycle.component';
-
 export class Template {
   name: string;
   url: string;
