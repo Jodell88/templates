@@ -18,4 +18,8 @@ export class HeaderbarComponent implements OnInit {
     window.open("https://www.google.com/maps/d/viewer?mid=1XII2dGmmObI_xvcXV2ARWTvPuaY", "_blank")
   }
 
+  surepayMap(){
+    window.open("https://www.google.com/maps/d/u/0/viewer?mid=1FjSB2T6KufyHo8q29pph27_B8jM&hl=en", "_blank")
+  }
+
 }
