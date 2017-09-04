@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BillingCycleService} from '../billing-cycle.service';
 
 export class Billing{
   constructor(
@@ -26,19 +27,17 @@ export class BillingFormComponent implements OnInit {
     this.model = new Billing()
   }
 
-  cycles = [
-    {value: "2nd to 1st"},
-    {value: "16th to 15th"}
-  ]
-
+  cycles: any = [] ;
+ 
   options = [
     {value: "No"},
     {value: "Yes"}
   ]
 
-  constructor() { }
+  constructor(private cycleService:BillingCycleService) { }
 
   ngOnInit() {
+    this.cycles = this.cycleService.cycles;
   }
 
 }

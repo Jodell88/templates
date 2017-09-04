@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BillingCycleService} from '../billing-cycle.service';
 
 export class Rebate{
   constructor(
@@ -22,23 +23,21 @@ export class Rebate{
 })
 export class RebateFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cycleService:BillingCycleService) { }
 
   ngOnInit() {
+    this.cycles = this.cycleService.cycles;
   }
 
   title = "Rebate"
+
+  cycles: any = [] ;
 
   model = new Rebate()
 
   reset(){
     this.model = new Rebate()
   }
-
-  cycles = [
-    {value: "2nd to 1st"},
-    {value: "16th to 15th"}
-  ]
 
   addons = [
     {value: " N/A"},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BillingCycleService} from '../billing-cycle.service';
 
 export class Relocation{
   constructor(
@@ -25,7 +26,11 @@ export class Relocation{
 })
 export class RelocationFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cycleService:BillingCycleService) { }
+
+  ngOnInit() {
+    this.cycles = this.cycleService.cycles;
+  }
 
   title = "Relocation"
 
@@ -42,10 +47,7 @@ export class RelocationFormComponent implements OnInit {
     this.model = new Relocation()
   }
 
-  cycles = [
-    {value: "2nd to 1st"},
-    {value: "16th to 15th"}
-  ]
+  cycles: any = [] ;
 
   addons = [
     {value: " N/A"},
@@ -60,7 +62,6 @@ export class RelocationFormComponent implements OnInit {
     {value: " Watch Adult"},
   ]
 
-  ngOnInit() {
-  }
+  
 
 }
