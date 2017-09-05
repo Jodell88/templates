@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PackageDataService } from '../package-data.service';
 
 export class Durq{
   constructor(
@@ -20,9 +21,10 @@ export class Durq{
 })
 export class UpdownFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private packageService:PackageDataService) { }
 
   ngOnInit() {
+    this.addons = this.packageService.addons;
   }
 
   title = "Upgrade / Downgrade"
@@ -33,18 +35,7 @@ export class UpdownFormComponent implements OnInit {
     this.model = new Durq()
   }
 
-  addons = [
-    {value: " N/A"},
-    {value: " Catch Up TV: Free"},
-    {value: " Catch Up TV: Watch More"},
-    {value: " FOX Premium"},
-    {value: " HBO"},
-    {value: " HBO & MAX Combo"},
-    {value: " MAX"},
-    {value: " MaxPak"},
-    {value: " Premium Sports"},
-    {value: " Watch Adult"},
-  ];
+  addons: any= [];
 
   count = [0,1,2,3,4,5,6,7,8,9,10,11,12];
 

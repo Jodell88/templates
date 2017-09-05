@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BillingCycleService} from '../billing-cycle.service';
+import { PackageDataService } from '../package-data.service';
 
 export class Relocation{
   constructor(
@@ -26,10 +27,11 @@ export class Relocation{
 })
 export class RelocationFormComponent implements OnInit {
 
-  constructor(private cycleService:BillingCycleService) { }
+  constructor(private cycleService:BillingCycleService, private packageService:PackageDataService) { }
 
   ngOnInit() {
     this.cycles = this.cycleService.cycles;
+    this.addons = this.packageService.addons;
   }
 
   title = "Relocation"
@@ -49,18 +51,7 @@ export class RelocationFormComponent implements OnInit {
 
   cycles: any = [] ;
 
-  addons = [
-    {value: " N/A"},
-    {value: " Catch Up TV: Watch More"},
-    {value: " Catch Up TV: Free"},
-    {value: " FOX Premium"},
-    {value: " HBO"},
-    {value: " HBO & MAX Combo"},
-    {value: " MAX"},
-    {value: " MaxPak"},
-    {value: " Premium Sports"},
-    {value: " Watch Adult"},
-  ]
+  addons: any = [];
 
   
 

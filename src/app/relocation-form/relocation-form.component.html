@@ -27,7 +27,7 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
         <md-select multiple [(ngModel)]="model.oldAddons" name="oldAddons" placeholder="Add-on Packages" class="relocation-full-width">
-          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
+          <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
         </md-select>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
         <md-select multiple [(ngModel)]="model.newAddons" name="newAddons" placeholder="Add-on Packages" class="relocation-full-width">
-          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
+          <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
         </md-select>
       </div>
     </div>
