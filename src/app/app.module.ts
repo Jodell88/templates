@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { MyDateAdapter } from './customdateadapter';
 import { CustomReuseStrategy} from './customreusestrategy';
 import { BillingCycleService} from './billing-cycle.service';
+import { PackageDataService } from './package-data.service';
 import { TechnicalFormComponent } from './technical-form/technical-form.component';
 import { ForwardingFormComponent } from './forwarding-form/forwarding-form.component';
 import { LoyaltyFormComponent } from './loyalty-form/loyalty-form.component';
@@ -117,7 +118,8 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
     {provide: LOCALE_ID, useValue: 'us'},
     {provide: DateAdapter, useClass: MyDateAdapter},
     {provide: RouteReuseStrategy, useClass: CustomReuseStrategy},
-    BillingCycleService
+    BillingCycleService,
+    PackageDataService
   ],
   bootstrap: [AppComponent]
 })
