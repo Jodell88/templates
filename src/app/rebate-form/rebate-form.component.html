@@ -21,7 +21,7 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
         <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)" class="rebate-full-width">
-          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
+          <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
         </md-select>
       </div>
     </div>
