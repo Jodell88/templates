@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl } from '@angular/forms';
 import { RouterModule,  RouteReuseStrategy } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule, MdToolbarModule,
          MdSidenavModule, MdListModule, MdInputModule, MdCardModule, MdDatepickerModule,
          MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule, MdIconModule,
-         MdMenuModule } from '@angular/material';
+         MdMenuModule, MdAutocompleteModule, MdFormFieldModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -112,7 +112,7 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
     MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule,
     MdToolbarModule, MdSidenavModule, MdListModule, MdInputModule,
     MdCardModule, MdDatepickerModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule, MdIconModule, MdMenuModule
+    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdFormFieldModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'us'},
