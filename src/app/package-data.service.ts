@@ -36,7 +36,31 @@ export class PackageDataService {
     {name: "Watch, Surf and Save a Little More with PVR 9000", value: 520.00, type: "Bundle", available: true},
     {name: "Watch, Surf and Save a Lot", value: 765.00, type: "Bundle", available: true},
     {name: "Watch, Surf and Save a Lot More", value: 1000.00, type: "Bundle", available: true},
-    {name: "Watch, Surf and Save It All", value: 1275.00, type: "Bundle", available: true}
+    {name: "Watch, Surf and Save It All", value: 1275.00, type: "Bundle", available: true},
+
+    {name: "Surf Some More, Watch More", value: 500.00},
+    {name: "Surf Some More, Watch More with PVR 9000", value: 520.00},
+    {name: "Surf Some More, Watch A Lot", value: 600.00},
+    {name: "Surf Some More, Watch A Lot More", value: 700.00},
+    {name: "Surf Some More, Watch It All", value: 850.00},
+
+    {name: "Surf A Lot, Watch More", value: 665.00},
+    {name: "Surf A Lot, Watch More with PVR 9000", value: 685.00},
+    {name: "Surf A Lot, Watch A Lot", value: 765.00},
+    {name: "Surf A Lot, Watch A Lot More", value: 865.00},
+    {name: "Surf A Lot, Watch it All", value: 1015.00},
+
+    {name: "Surf A Lot More, Watch More", value: 800.00},
+    {name: "Surf A Lot More, Watch More with PVR 9000", value: 820.00},
+    {name: "Surf A Lot More, Watch A Lot", value: 900.00},
+    {name: "Surf A Lot More, Watch A Lot More", value: 1000.00},
+    {name: "Surf A Lot More, Watch it All", value: 1150.00},
+
+    {name: "Surf It All, Watch More", value: 925.00},
+    {name: "Surf It All, Watch More with PVR 9000", value: 945.00},
+    {name: "Surf It All, Watch A Lot", value: 1025.00},
+    {name: "Surf It All, Watch A Lot More", value: 1125.00},
+    {name: "Surf It All, Watch It All", value: 1275.00}
 
   ]
 
