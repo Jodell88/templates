@@ -13,32 +13,32 @@
           </md-select>
         </div>
         <div fxFlexAlign="center" fxFlexOffset="2%" fxFlex="49%">
-          <md-input-container class="csp-full-width">
+          <md-form-field class="csp-full-width">
             <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date when issue first surfaced">
             <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-input-container>
+          </md-form-field>
           <md-datepicker #myDatepicker></md-datepicker>
         </div>
       </div>
-      <md-input-container class="csp-full-width">
+      <md-form-field class="csp-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.iptv" name="iptv" placeholder="IPTV Only"></textarea>
-      </md-input-container>
-      <md-input-container class="csp-full-width">
+      </md-form-field>
+      <md-form-field class="csp-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.internet" name="internet" placeholder="Internet Only"></textarea>
-      </md-input-container>
-      <md-input-container class="csp-full-width">
+      </md-form-field>
+      <md-form-field class="csp-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.both" name="both" placeholder="Both IPTV and Internet"></textarea>
-      </md-input-container>
-      <md-input-container class="csp-full-width">
+      </md-form-field>
+      <md-form-field class="csp-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.info" name="info" placeholder="Additional Info"></textarea>
-      </md-input-container>
+      </md-form-field>
     </form>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <md-card>
       <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="csp-full-width-height">
+        <md-form-field class="csp-full-width-height">
           <textarea #csp mdInput mdTextareaAutosize readonly>What is the reported Service Issue?: {{model.issue}}
 
 Date when issue first surfaced: {{model.date | date: 'mediumDate'}}
@@ -51,7 +51,7 @@ Both IPTV and Internet: {{model.both}}
 
 Additional Info: {{model.info}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='csp'>COPY</button>

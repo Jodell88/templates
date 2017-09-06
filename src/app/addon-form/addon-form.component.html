@@ -19,9 +19,9 @@
     <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="addon-full-width">
+        <md-form-field class="addon-full-width">
           <input [(ngModel)]="model.basePackage" name="package" mdInput placeholder="Base Package" >
-        </md-input-container>
+        </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
@@ -35,7 +35,7 @@
     <md-card>
       <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="addon-full-width">
+        <md-form-field class="addon-full-width">
           <textarea #addon mdInput mdTextareaAutosize readonly>Add-on Requested: {{model.addon}}
 
 Promotional Period: {{model.promotion}}
@@ -44,7 +44,7 @@ Base Package: {{model.basePackage}}
 
 I.D. Verified: {{model.verified}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='addon'>COPY</button>

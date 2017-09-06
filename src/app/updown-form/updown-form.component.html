@@ -6,16 +6,16 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="updown-full-width">
+        <md-form-field class="updown-full-width">
           <input [(ngModel)]="model.oldBundle" name="oldBundle" mdInput placeholder="Existing BND#" >
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="updown-full-width">
+        <md-form-field class="updown-full-width">
           <input [(ngModel)]="model.newBundle" name="newBundle" mdInput placeholder="New Package Requested" >
-        </md-input-container>
+        </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
@@ -46,23 +46,23 @@
         </md-select>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-input-container class="updown-full-width">
+        <md-form-field class="updown-full-width">
           <input [(ngModel)]="model.order" name="workorder" mdInput placeholder="Work Order#" >
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
 
     <div fxLayout="row">
-      <md-input-container class="updown-full-width">
+      <md-form-field class="updown-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.info" name="info" placeholder="Any Additional Info"></textarea>
-      </md-input-container>
+      </md-form-field>
     </div>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <md-card>
       <md-card-title>{{ title }} Template Preview</md-card-title>
         <md-card-content>
-          <md-input-container class="updown-full-width">
+          <md-form-field class="updown-full-width">
             <textarea #updown mdInput mdTextareaAutosize readonly>Existing BND#: {{model.oldBundle}}
 
 New Package Requested: {{model.newBundle}}
@@ -79,7 +79,7 @@ Work Order#: {{model.order}}
 
 Additional Information: {{model.info}}
             </textarea>
-          </md-input-container>
+          </md-form-field>
         </md-card-content>
         <md-card-actions>
           <button md-button [ngxClipboard]='updown'>COPY</button>

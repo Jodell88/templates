@@ -7,41 +7,41 @@
     <form>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-input-container class="loyal-full-width">
+          <md-form-field class="loyal-full-width">
             <input [(ngModel)]="model.card" name="card" mdInput placeholder="Loyalty Card Number" >
-          </md-input-container>
+          </md-form-field>
         </div>
         <div fxFlexOffset=2% fxFlex=49%>
-          <md-input-container class="loyal-full-width">
+          <md-form-field class="loyal-full-width">
             <input [(ngModel)]="model.invoice" name="invoice" mdInput placeholder="Invoice Number" >
-          </md-input-container>
+          </md-form-field>
         </div>
       </div>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-input-container class="loyal-full-width">
+          <md-form-field class="loyal-full-width">
             <input [(ngModel)]="model.amountPaid" name="amount" mdInput placeholder="Amount Paid" >
-          </md-input-container>
+          </md-form-field>
         </div>
         <div fxFlexOffset=2% fxFlex=49%>
-          <md-input-container class="loyal-full-width">
+          <md-form-field class="loyal-full-width">
             <input [(ngModel)]="model.date" name="date"  mdInput [mdDatepicker]="myDatepicker" placeholder="Date invoice Paid">
             <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-input-container>
+          </md-form-field>
           <md-datepicker #myDatepicker></md-datepicker>
         </div>
       </div>
 
-      <md-input-container class="loyal-full-width-height">
+      <md-form-field class="loyal-full-width-height">
         <textarea mdTextareaAutosize [(ngModel)]="model.description" name="description" mdInput placeholder="Description"></textarea>
-      </md-input-container>
+      </md-form-field>
     </form>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <md-card>
         <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="loyal-full-width-height">
+        <md-form-field class="loyal-full-width-height">
           <textarea #loyalty mdInput mdTextareaAutosize readonly>Loyalty Card Number: {{model.card}}
 
 Invoice Number: {{model.invoice}}
@@ -52,7 +52,7 @@ Amount Paid: ${{model.amountPaid}}
 
 Description: {{model.description}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='loyalty'>COPY</button>

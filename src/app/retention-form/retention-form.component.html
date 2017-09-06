@@ -6,42 +6,42 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <input [(ngModel)]="model.existingPackage" name="package" mdInput placeholder="Existing Package">
-        </md-input-container>
+        </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <input [(ngModel)]="model.promotion" name="promotion" mdInput placeholder="Promotion Applied" >
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <input [(ngModel)]="model.balance" name="balance" mdInput placeholder="Outstanding Figure (from tableau)">
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex>
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <textarea [(ngModel)]="model.reason" name="reason" mdInput mdTextareaAutosize placeholder="Reason for cancellation" ></textarea>
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex>
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <textarea [(ngModel)]="model.save" name="save" mdInput mdTextareaAutosize placeholder="TSP/CSP Save attempt" ></textarea>
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex mdTooltip=" Please note any additional case created regarding a save attempt must be attached to the Retention parent case as a Child case.">
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <input [(ngModel)]="model.saveCase" name="saveCase" mdInput placeholder="Case Number created due to save attempt" >
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
     <md-card>
       <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="retention-full-width">
+        <md-form-field class="retention-full-width">
           <textarea #retention mdInput mdTextareaAutosize readonly>Existing Package: {{model.existingPackage}}
 
 Promotion Applied: {{model.promotion}}
@@ -62,7 +62,7 @@ TSP/CSP Save attempt: {{model.save}}
 
 Case Number created due to save attempt: {{model.saveCase}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='retention'>COPY</button>

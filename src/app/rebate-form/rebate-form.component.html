@@ -14,9 +14,9 @@
     <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="rebate-full-width">
+        <md-form-field class="rebate-full-width">
           <input [(ngModel)]="model.servicePackage" name="package" mdInput placeholder="Package Subscribed" >
-        </md-input-container>
+        </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
         <br>
@@ -41,29 +41,29 @@
     <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-input-container class="rebate-full-width">
+        <md-form-field class="rebate-full-width">
           <input [(ngModel)]="model.invoice" name="invoice" mdInput placeholder="Bill Invoice" >
-        </md-input-container>
+        </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-input-container class="rebate-full-width">
+        <md-form-field class="rebate-full-width">
           <input [(ngModel)]="model.amount" name="amount" mdInput placeholder="Bill Amount" >
-        </md-input-container>
+        </md-form-field>
       </div>
     </div>
-    <md-input-container class="rebate-full-width">
+    <md-form-field class="rebate-full-width">
       <textarea mdInput mdTextareaAutosize [(ngModel)]="model.description" name="description" placeholder="Description of the issue"></textarea>
-    </md-input-container>
-    <md-input-container class="rebate-full-width">
+    </md-form-field>
+    <md-form-field class="rebate-full-width">
       <textarea mdInput mdTextareaAutosize [(ngModel)]="model.rebate" name="rebate" placeholder="Rebate Calculations"></textarea>
-    </md-input-container>
+    </md-form-field>
 
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <md-card>
       <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="rebate-full-width">
+        <md-form-field class="rebate-full-width">
           <textarea #rebate mdInput mdTextareaAutosize readonly>Existing Package: {{model.servicePackage}}
 
 Additional Boxes (8083): {{model.stb}}
@@ -82,7 +82,7 @@ Description of the issue: {{model.description}}
 
 Rebate Calculation done by professional: {{model.rebate}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='rebate'>COPY</button>

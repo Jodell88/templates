@@ -7,40 +7,40 @@
     <form>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-input-container class="payment-full-width">
+          <md-form-field class="payment-full-width">
             <input [(ngModel)]="model.invoice" name="invoice" mdInput placeholder="Invoice Number" >
-          </md-input-container>
+          </md-form-field>
         </div>
         <div fxFlexOffset=2% fxFlex="49%">
-          <md-input-container class="payment-full-width">
+          <md-form-field class="payment-full-width">
             <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date Invoice Paid">
             <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-input-container>
+          </md-form-field>
           <md-datepicker #myDatepicker></md-datepicker>
         </div>
       </div>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-input-container class="payment-full-width">
+          <md-form-field class="payment-full-width">
             <input [(ngModel)]="model.amount" name="amount" mdInput placeholder="Amount Paid" >
-          </md-input-container>
+          </md-form-field>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
-          <md-input-container class="payment-full-width">
+          <md-form-field class="payment-full-width">
             <input [(ngModel)]="model.receipt" name="receipt" mdInput placeholder="Receipt Number" >
-          </md-input-container>
+          </md-form-field>
         </div>
       </div>
-      <md-input-container class="payment-full-width">
+      <md-form-field class="payment-full-width">
         <textarea mdInput mdTextareaAutosize [(ngModel)]="model.comments" name="comments" placeholder="Additional Comments"></textarea>
-      </md-input-container>
+      </md-form-field>
     </form>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <md-card>
       <md-card-title>{{title}} Template Preview</md-card-title>
       <md-card-content>
-        <md-input-container class="payment-full-width">
+        <md-form-field class="payment-full-width">
           <textarea #payment mdInput mdTextareaAutosize readonly>Invoice Number: {{model.invoice}}
 
 Date Invoice Paid: {{model.date | date: 'mediumDate'}}
@@ -51,7 +51,7 @@ Receipt Number: {{model.receipt}}
 
 Additional Comments: {{model.comments}}
           </textarea>
-        </md-input-container>
+        </md-form-field>
       </md-card-content>
       <md-card-actions>
         <button md-button [ngxClipboard]='payment'>COPY</button>

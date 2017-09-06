@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BillingCycleService} from '../billing-cycle.service';
 import { PackageDataService } from '../package-data.service';
+import { FormControl } from '@angular/forms';
 
 export class Relocation{
   constructor(
@@ -32,6 +33,7 @@ export class RelocationFormComponent implements OnInit {
   ngOnInit() {
     this.cycles = this.cycleService.cycles;
     this.addons = this.packageService.addons;
+    this.packages = this.packageService.packages;
   }
 
   title = "Relocation"
@@ -53,6 +55,9 @@ export class RelocationFormComponent implements OnInit {
 
   addons: any = [];
 
+  packages: any= [];
+  
+  existingControl: FormControl = new FormControl();
   
 
 }
