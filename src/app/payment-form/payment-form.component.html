@@ -14,9 +14,9 @@
         <div fxFlexOffset=2% fxFlex="49%">
           <md-form-field class="payment-full-width">
             <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date Invoice Paid">
-            <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-form-field>
-          <md-datepicker #myDatepicker></md-datepicker>
+            <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
+            <md-datepicker #myDatepicker></md-datepicker>
+          </md-form-field>          
         </div>
       </div>
       <div fxLayout="row">

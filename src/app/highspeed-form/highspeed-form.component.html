@@ -6,7 +6,6 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
       <div fxFlex>
-        <br>
         <md-select [(ngModel)]="user.title" name="title" placeholder="Title" class="highspeed-full-width">
           <md-option *ngFor="let title of titles" [value]="title.value">{{ title.value }}</md-option>
         </md-select>

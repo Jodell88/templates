@@ -19,13 +19,11 @@
         </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <br>
         <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)" class="rebate-full-width">
           <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
         </md-select>
       </div>
     </div>
-    <br>
     <div fxLayout="row">
       <div fxFlex="49%">
         <md-select [(ngModel)]="model.stb" name="stb" placeholder="Additonal STB (8083)" class="rebate-full-width">

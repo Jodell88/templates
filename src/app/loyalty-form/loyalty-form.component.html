@@ -26,12 +26,11 @@
         <div fxFlexOffset=2% fxFlex=49%>
           <md-form-field class="loyal-full-width">
             <input [(ngModel)]="model.date" name="date"  mdInput [mdDatepicker]="myDatepicker" placeholder="Date invoice Paid">
-            <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-form-field>
-          <md-datepicker #myDatepicker></md-datepicker>
+            <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
+            <md-datepicker #myDatepicker></md-datepicker>
+          </md-form-field>          
         </div>
       </div>
-
       <md-form-field class="loyal-full-width-height">
         <textarea mdTextareaAutosize [(ngModel)]="model.description" name="description" mdInput placeholder="Description"></textarea>
       </md-form-field>

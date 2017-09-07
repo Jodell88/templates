@@ -24,7 +24,6 @@
         </md-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <br>
         <md-select [(ngModel)]="model.verified" name="verified" placeholder="I.D Verified" class="addon-full-width">
           <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
         </md-select>

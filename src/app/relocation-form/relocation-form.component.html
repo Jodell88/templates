@@ -7,7 +7,6 @@
     <form>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <br>
           <md-select [(ngModel)]="model.cycle" name="cycle" placeholder="Billing Cycle" class="relocation-full-width">
             <md-option *ngFor="let cycle of cycles" [value]="cycle.value">{{ cycle.value }}</md-option>
           </md-select>
@@ -18,18 +17,16 @@
           </md-form-field>
         </div>
       </div>
-      <br>
       <div fxLayout="row">
         <div fxFlex="49%">
           <md-form-field class="relocation-full-width">
-            <input [(ngModel)]="model.oldPackage" name="oldPackage" mdInput placeholder="Existing Package" [mdAutocomplete]="existing" [formControl]="existingControl">
+            <input [(ngModel)]="model.oldPackage" name="oldPackage" mdInput placeholder="Existing Package" [mdAutocomplete]="existing">
             <md-autocomplete #existing="mdAutocomplete">
                 <md-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</md-option>
             </md-autocomplete>
           </md-form-field>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
-          <br>
           <md-select multiple [(ngModel)]="model.oldAddons" name="oldAddons" placeholder="Add-on Packages" class="relocation-full-width">
             <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
           </md-select>
@@ -42,30 +39,27 @@
           </md-form-field>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
-          <br>
           <md-select multiple [(ngModel)]="model.newAddons" name="newAddons" placeholder="Add-on Packages" class="relocation-full-width">
             <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
           </md-select>
         </div>
       </div>
-      <br>
       <div fxLayout="row">
         <div fxFlex="49%">
           <md-form-field class="relocation-full-width">
             <input mdInput [(ngModel)]="model.installDate" name="installdate" [mdDatepicker]="installDatepicker" placeholder="Installation Date?">
-            <button mdSuffix [mdDatepickerToggle]="installDatepicker"></button>
+            <md-datepicker-toggle mdSuffix [for]="installDatepicker"></md-datepicker-toggle>
+            <md-datepicker #installDatepicker></md-datepicker>
           </md-form-field>
-          <md-datepicker #installDatepicker></md-datepicker>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
           <md-form-field class="relocation-full-width">
             <input mdInput [(ngModel)]="model.removalDate" name="removaldate" [mdDatepicker]="myDatepicker" placeholder="Removal Date">
-            <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
+            <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
+            <md-datepicker #myDatepicker></md-datepicker>
           </md-form-field>
-          <md-datepicker #myDatepicker></md-datepicker>
         </div>
       </div>
-      <br>
       <div fxLayout="row">
         <div fxFlex="49%">
           <md-form-field class="relocation-full-width">
@@ -73,7 +67,6 @@
           </md-form-field>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
-          <br>
           <md-select [(ngModel)]="model.rebate" name="rebate" placeholder="Rebate Needed?" class="relocation-full-width">
             <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
           </md-select>

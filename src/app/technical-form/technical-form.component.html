@@ -26,12 +26,11 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <md-form-field class="technical-full-width">
           <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date issue first surfaced?">
-          <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-        </md-form-field>
-        <md-datepicker #myDatepicker></md-datepicker>
+          <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
+          <md-datepicker #myDatepicker></md-datepicker>
+        </md-form-field>        
       </div>
     </div>
-    <br>
     <div fxLayout="row">
       <div fxFlex="49%">
         <md-select multiple [(ngModel)]="model.profile" name="profile" placeholder="WAN Profiles" class="technical-full-width">

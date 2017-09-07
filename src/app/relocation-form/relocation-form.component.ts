@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BillingCycleService} from '../billing-cycle.service';
 import { PackageDataService } from '../package-data.service';
-import { FormControl } from '@angular/forms';
+import { FormsModule, FormControl } from '@angular/forms';
 
 export class Relocation{
   constructor(

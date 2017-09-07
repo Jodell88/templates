@@ -7,7 +7,6 @@
     <form>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <br>
           <md-select multiple [(ngModel)]="model.issue" name="issuetype" placeholder="What is the reported Service Issue?" class="csp-full-width">
             <md-option *ngFor="let serviceIssue of serviceIssues" [value]="serviceIssue.value">{{ serviceIssue.value }}</md-option>
           </md-select>
@@ -15,9 +14,9 @@
         <div fxFlexAlign="center" fxFlexOffset="2%" fxFlex="49%">
           <md-form-field class="csp-full-width">
             <input mdInput [(ngModel)]="model.date" name="date" [mdDatepicker]="myDatepicker" placeholder="Date when issue first surfaced">
-            <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-          </md-form-field>
-          <md-datepicker #myDatepicker></md-datepicker>
+            <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
+            <md-datepicker #myDatepicker></md-datepicker>
+          </md-form-field>          
         </div>
       </div>
       <md-form-field class="csp-full-width">
