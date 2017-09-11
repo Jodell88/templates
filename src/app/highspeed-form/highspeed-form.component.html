@@ -5,19 +5,19 @@
 <div fxlayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
-      <div fxFlex>
-        <md-select [(ngModel)]="user.title" name="title" placeholder="Title" class="highspeed-full-width">
+      <div fxFlex="31%">
+        <md-select [(ngModel)]="user.title" name="title" placeholder="Professional's Title" class="highspeed-full-width">
           <md-option *ngFor="let title of titles" [value]="title.value">{{ title.value }}</md-option>
         </md-select>
       </div>
-      <div fxFlexOffset="2%" fxFlex>
+      <div fxFlexOffset="2%" fxFlex="31%">
         <md-form-field class="highspeed-full-width">
-          <input [(ngModel)]="user.firstname" name="firstname" mdInput placeholder="Firstname" >
+          <input [(ngModel)]="user.firstname" name="firstname" mdInput placeholder="Professional's Firstname" >
         </md-form-field>
       </div>
-      <div fxFlexOffset="2%" fxFlex>
+      <div fxFlexOffset="2%" fxFlex="31%">
         <md-form-field class="highspeed-full-width">
-          <input [(ngModel)]="user.lastname" name="lastname" mdInput placeholder="Lastname" >
+          <input [(ngModel)]="user.lastname" name="lastname" mdInput placeholder="Professional's Lastname" >
         </md-form-field>
       </div>
     </div>
