@@ -115,7 +115,7 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
     MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdFormFieldModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'us'},
+    {provide: LOCALE_ID, useValue: 'en-GB'},
     {provide: DateAdapter, useClass: MyDateAdapter},
     {provide: RouteReuseStrategy, useClass: CustomReuseStrategy},
     BillingCycleService,
