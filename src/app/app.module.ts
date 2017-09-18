@@ -57,6 +57,9 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     RouterModule.forRoot([
       {
+        path: '', redirectTo: 'home', pathMatch: 'full'
+      },
+      {
         path: 'billing',
         component: BillingFormComponent
       },
@@ -107,6 +110,10 @@ import { HomeComponent } from './home/home.component';
       {
         path: 'rebate',
         component: RebateFormComponent
+      },
+      {
+        path: 'home',
+        component: HomeComponent
       },
 
     ]),
