@@ -29,6 +29,7 @@ import { RetentionFormComponent } from './retention-form/retention-form.componen
 import { AddonFormComponent } from './addon-form/addon-form.component';
 import { RebateFormComponent } from './rebate-form/rebate-form.component';
 import { HeaderbarComponent } from './headerbar/headerbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
     RetentionFormComponent,
     AddonFormComponent,
     RebateFormComponent,
-    HeaderbarComponent
+    HeaderbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
