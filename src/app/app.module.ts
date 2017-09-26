@@ -30,6 +30,7 @@ import { AddonFormComponent } from './addon-form/addon-form.component';
 import { RebateFormComponent } from './rebate-form/rebate-form.component';
 import { HeaderbarComponent } from './headerbar/headerbar.component';
 import { HomeComponent } from './home/home.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { HomeComponent } from './home/home.component';
     AddonFormComponent,
     RebateFormComponent,
     HeaderbarComponent,
-    HomeComponent
+    HomeComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,
