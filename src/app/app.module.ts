@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule, MdToolbarModule,
          MdSidenavModule, MdListModule, MdInputModule, MdCardModule, MdDatepickerModule,
          MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule, MdIconModule,
-         MdMenuModule, MdAutocompleteModule, MdFormFieldModule } from '@angular/material';
+         MdMenuModule, MdAutocompleteModule, MdDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -123,7 +123,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule,
     MdToolbarModule, MdSidenavModule, MdListModule, MdInputModule,
     MdCardModule, MdDatepickerModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdFormFieldModule
+    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdDialogModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},
@@ -131,6 +131,9 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     {provide: RouteReuseStrategy, useClass: CustomReuseStrategy},
     BillingCycleService,
     PackageDataService
+  ],
+  entryComponents: [
+    ContactListComponent
   ],
   bootstrap: [AppComponent]
 })

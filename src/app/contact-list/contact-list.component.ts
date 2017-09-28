@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MdDialogRef} from '@angular/material';
 
 @Component({
   selector: 'contact-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public thisDialogRef: MdDialogRef<ContactListComponent>) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MdDialog } from '@angular/material';
+import { ContactListComponent } from '../contact-list/contact-list.component';
+
 
 @Component({
   selector: 'headerbar',
@@ -7,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public contactList: MdDialog) { }
 
   ngOnInit() {
   }
@@ -20,6 +23,13 @@ export class HeaderbarComponent implements OnInit {
 
   surepayMap(){
     window.open("https://www.google.com/maps/d/u/0/viewer?mid=1FjSB2T6KufyHo8q29pph27_B8jM&hl=en", "_blank")
+  }
+
+  openDialog() {
+    let dialogRef = this.contactList.open(ContactListComponent, {
+      height: '400px',
+      width: '600px',
+    });
   }
 
 }
