@@ -27,8 +27,8 @@ export class HeaderbarComponent implements OnInit {
 
   openDialog() {
     let dialogRef = this.contactList.open(ContactListComponent, {
-      height: '400px',
-      width: '600px',
+      // height: '90%',
+      width: '40%',
     });
   }
 

@@ -1,5 +1,110 @@
 <div>
-    <h2 md-dialog-title>MY DIALOG</h2>
+  <h1 md-dialog-title>Contact List</h1>
+</div>
+<md-dialog-content>
+  <br>
+  <md-accordion class="headers-align">
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          Contact Centre
+        </md-panel-title>
+        <md-panel-description>
+          Hunt: 5301
+          <md-icon>contacts</md-icon>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+        <h3 md-subheader>Leaders</h3>
+        <md-list-item *ngFor="let person of contactCentreLeaders">
+          <md-icon md-list-icon>supervisor_account</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+        <md-divider></md-divider>
+        <h3 md-subheader>Senior Technical Support Professionals</h3>
+        <md-list-item *ngFor="let person of seniorTSP">
+          <md-icon md-list-icon>build</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+        <md-divider></md-divider>
+        <h3 md-subheader>Technical Support Professionals</h3>
+        <md-list-item *ngFor="let person of tsp">
+          <md-icon md-list-icon>build</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+        <md-divider></md-divider>
+        <h3 md-subheader>Customer Support Professionals</h3>
+        <md-list-item *ngFor="let person of csp">
+          <md-icon md-list-icon>face</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+      </md-list>
+    </md-expansion-panel>
 
-    <p>dsadafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
-</div>>
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          Dispatch
+        </md-panel-title>
+        <md-panel-description>
+          Hunt: 1999
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+        <h3 md-subheader>Dispatchers</h3>
+        <md-list-item *ngFor="let person of dispatch">
+            <md-icon md-list-icon>local_shipping</md-icon>
+            <h4 md-line>{{person.employeeName}}</h4>
+            <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+      </md-list>
+    </md-expansion-panel>
+
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          NOC
+        </md-panel-title>
+        <md-panel-description>
+          <hr>
+        <md-icon>settings</md-icon>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+        <md-list-item *ngFor="let person of noc">
+          <md-icon md-list-icon>build</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+      </md-list>
+    </md-expansion-panel>
+
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          Sales (Residential)
+        </md-panel-title>
+        <md-panel-description>
+          Hunt: 1499
+          <md-icon>shopping_cart</md-icon>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+          <md-list-item *ngFor="let person of salesResidential">
+            <md-icon md-list-icon>shopping_cart</md-icon>
+            <h4 md-line>{{person.employeeName}}</h4>
+            <p md-line>Extension: {{person.extension}}</p>
+          </md-list-item>
+        </md-list>
+    </md-expansion-panel>
+
+  </md-accordion>
+  <br>
+</md-dialog-content>
+<md-dialog-actions>
+    <button md-button [md-dialog-close]="true">Close</button>
+</md-dialog-actions>

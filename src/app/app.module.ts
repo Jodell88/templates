@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule, MdToolbarModule,
          MdSidenavModule, MdListModule, MdInputModule, MdCardModule, MdDatepickerModule,
          MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule, MdIconModule,
-         MdMenuModule, MdAutocompleteModule, MdDialogModule } from '@angular/material';
+         MdMenuModule, MdAutocompleteModule, MdDialogModule, MdExpansionModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -123,7 +123,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule,
     MdToolbarModule, MdSidenavModule, MdListModule, MdInputModule,
     MdCardModule, MdDatepickerModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdDialogModule
+    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdDialogModule,
+    MdExpansionModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},
