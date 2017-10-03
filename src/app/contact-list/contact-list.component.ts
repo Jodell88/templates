@@ -58,9 +58,36 @@ export class ContactListComponent implements OnInit {
   ]
 
   salesResidential = [
+    {employeeName: 'Delise Redmond', position: 'Telesales Agent', extension: '2106'},
     {employeeName: 'Fabian Nancoo', position: 'Telesales Agent', extension: '2111'},
+    {employeeName: 'Kitwana Williams', position: 'Telesales Agent', extension: '2111'},
     {employeeName: 'Nyland Young', position: 'Telesales Agent', extension: '2432'},
     
+  ]
+
+  salesExecutive = [
+    {employeeName: 'Anesa Paladee', position: 'Executive Sales', extension: '2602'},
+    {employeeName: 'Natasha Williams-Hinkson', position: 'Executive Sales', extension: '2601'},
+  ]
+
+  finance = [
+    {employeeName: 'Shelly-Ann Narine', position: 'Billing Assurance Officer', extension: '2703'},
+    {employeeName: 'Robert Farrier', position: 'Manager, Credit & Collections', extension: '2703'},
+    {employeeName: 'Vrindra Moonasar', position: 'Credit Assistant', extension: '2703'},
+  ]
+
+  it = [
+    {employeeName: 'Jessel Ackbarali', position: 'Manager', extension: '2300'},
+    {employeeName: 'Lackeshwar Bachan', position: 'Applications Consultant', extension: '2301'},
+    {employeeName: 'Sean St. John', position: 'IT Specialist', extension: '2302'},
+    {employeeName: 'Gerard Valere', position: 'IT Specialist', extension: '2303'},
+  ]
+
+  misc = [    
+    {employeeName: 'Nekita Skair', position: 'Human Resource Assistant', extension: '2801'},
+    {employeeName: 'Mickal Pierre', position: 'Marketing Assistant', extension: '2197'},
+    {employeeName: 'Quanah Patino', position: 'Product Lead', extension: '2105'},    
+    {employeeName: 'Vanessa Mohammed', position: 'Director of First Impression', extension: '3004'},
   ]
 
 }

@@ -52,6 +52,7 @@
         </md-panel-title>
         <md-panel-description>
           Hunt: 1999
+          <md-icon>local_shipping</md-icon>
         </md-panel-description>
       </md-expansion-panel-header>
       <md-list>
@@ -63,6 +64,65 @@
         </md-list-item>
       </md-list>
     </md-expansion-panel>
+
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          Finance & Accounting  
+        </md-panel-title>
+        <md-panel-description>
+          <hr>
+        <md-icon>account_balance</md-icon>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+        <md-list-item *ngFor="let person of finance">
+          <md-icon md-list-icon>account_balance</md-icon>
+          <h4 md-line>{{person.employeeName}}</h4>
+          <p md-line>{{person.position}}</p>
+          <p md-line>Extension: {{person.extension}}</p>
+        </md-list-item>
+      </md-list>
+    </md-expansion-panel>
+
+    <md-expansion-panel>
+        <md-expansion-panel-header>
+          <md-panel-title>
+            I.T
+          </md-panel-title>
+          <md-panel-description>
+            <hr>
+            <md-icon>computer</md-icon>
+          </md-panel-description>
+        </md-expansion-panel-header>
+        <md-list>
+            <md-list-item *ngFor="let person of it">
+              <md-icon md-list-icon>computer</md-icon>
+              <h4 md-line>{{person.employeeName}}</h4>
+              <p md-line>Extension: {{person.extension}}</p>
+            </md-list-item>
+          </md-list>
+      </md-expansion-panel>
+
+      <md-expansion-panel>
+          <md-expansion-panel-header>
+            <md-panel-title>
+              Miscellaneous
+            </md-panel-title>
+            <md-panel-description>
+              <hr>
+            <!-- <md-icon>settings</md-icon> -->
+            </md-panel-description>
+          </md-expansion-panel-header>
+          <md-list>
+            <md-list-item *ngFor="let person of misc">
+              <!-- <md-icon md-list-icon>build</md-icon> -->
+              <h4 md-line>{{person.employeeName}}</h4>
+              <p md-line>{{person.position}}</p>
+              <p md-line>Extension: {{person.extension}}</p>
+            </md-list-item>
+          </md-list>
+        </md-expansion-panel>
 
     <md-expansion-panel>
       <md-expansion-panel-header>
@@ -81,6 +141,25 @@
           <p md-line>Extension: {{person.extension}}</p>
         </md-list-item>
       </md-list>
+    </md-expansion-panel>
+
+    <md-expansion-panel>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          Sales (Executive)
+        </md-panel-title>
+        <md-panel-description>
+          <hr>
+          <md-icon>business</md-icon>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <md-list>
+          <md-list-item *ngFor="let person of salesExecutive">
+            <md-icon md-list-icon>business</md-icon>
+            <h4 md-line>{{person.employeeName}}</h4>
+            <p md-line>Extension: {{person.extension}}</p>
+          </md-list-item>
+        </md-list>
     </md-expansion-panel>
 
     <md-expansion-panel>
