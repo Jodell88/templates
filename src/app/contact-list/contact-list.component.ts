@@ -90,4 +90,10 @@ export class ContactListComponent implements OnInit {
     {employeeName: 'Vanessa Mohammed', position: 'Director of First Impression', extension: '3004'},
   ]
 
+  hr = [
+    {employeeName: 'Kandia Brown', position: 'Senior HR Officer/Human Resource Manager', extension: '2800'},
+    {employeeName: 'Nekita Skair', position: 'Human Resource Assistant', extension: '2801'},
+
+  ]
+
 }
