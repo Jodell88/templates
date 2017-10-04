@@ -60,7 +60,7 @@ export class ContactListComponent implements OnInit {
   salesResidential = [
     {employeeName: 'Delise Redmond', position: 'Telesales Agent', extension: '2106'},
     {employeeName: 'Fabian Nancoo', position: 'Telesales Agent', extension: '2111'},
-    {employeeName: 'Kitwana Williams', position: 'Telesales Agent', extension: '2111'},
+    {employeeName: 'Kitwana Williams', position: 'Telesales Agent', extension: '2100'},
     {employeeName: 'Nyland Young', position: 'Telesales Agent', extension: '2432'},
     
   ]
