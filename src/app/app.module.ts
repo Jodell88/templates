@@ -3,10 +3,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule,  RouteReuseStrategy } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule, MdToolbarModule,
-         MdSidenavModule, MdListModule, MdInputModule, MdCardModule, MdDatepickerModule,
-         MdNativeDateModule, MdSlideToggleModule, DateAdapter, MdTooltipModule, MdIconModule,
-         MdMenuModule, MdAutocompleteModule, MdDialogModule, MdExpansionModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule, MatToolbarModule,
+         MatSidenavModule, MatListModule, MatInputModule, MatCardModule, MatDatepickerModule,
+         MatNativeDateModule, MatSlideToggleModule, DateAdapter, MatTooltipModule, MatIconModule,
+         MatMenuModule, MatAutocompleteModule, MatDialogModule, MatExpansionModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -120,11 +120,11 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 
     ]),
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule, MdSelectModule, MdGridListModule,
-    MdToolbarModule, MdSidenavModule, MdListModule, MdInputModule,
-    MdCardModule, MdDatepickerModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule, MdIconModule, MdMenuModule, MdAutocompleteModule, MdDialogModule,
-    MdExpansionModule
+    MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule,
+    MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule,
+    MatCardModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule,
+    MatTooltipModule, MatIconModule, MatMenuModule, MatAutocompleteModule, MatDialogModule,
+    MatExpansionModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},

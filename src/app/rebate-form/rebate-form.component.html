@@ -6,63 +6,69 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row" class="rebate-full-width">
       <div fxFlex="100%">
-        <md-select [(ngModel)]="model.cycle" name="cycle" placeholder="Billing Cycle" class="rebate-full-width">
-          <md-option *ngFor="let cycle of cycles" [value]="cycle.value">{{ cycle.value }}</md-option>
-        </md-select>
-      </div>
-    </div>
-    <br>
-    <div fxLayout="row">
-      <div fxFlex="49%">
-        <md-form-field class="rebate-full-width">
-          <input [(ngModel)]="model.servicePackage" name="package" mdInput placeholder="Package Subscribed" >
-        </md-form-field>
-      </div>
-      <div fxFlexOffset="2%" fxFlex="49%">
-        <md-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)" class="rebate-full-width">
-          <md-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</md-option>
-        </md-select>
+        <mat-form-field class="rebate-full-width">
+          <mat-select [(ngModel)]="model.cycle" name="cycle" placeholder="Billing Cycle">
+            <mat-option *ngFor="let cycle of cycles" [value]="cycle.value">{{ cycle.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-select [(ngModel)]="model.stb" name="stb" placeholder="Additonal STB (8083)" class="rebate-full-width">
-          <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
-        </md-select>
+        <mat-form-field class="rebate-full-width">
+          <input [(ngModel)]="model.servicePackage" name="package" matInput placeholder="Package Subscribed" >
+        </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-select [(ngModel)]="model.pvr" name="pvr" placeholder="Additonal PVR (9000)" class="rebate-full-width">
-          <md-option *ngFor="let index of count" [value]="index">{{ index }}</md-option>
-        </md-select>
+        <mat-form-field class="rebate-full-width">
+          <mat-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)">
+            <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
+          </mat-select>
+      </mat-form-field>
       </div>
     </div>
-    <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-form-field class="rebate-full-width">
-          <input [(ngModel)]="model.invoice" name="invoice" mdInput placeholder="Bill Invoice" >
-        </md-form-field>
+        <mat-form-field class="rebate-full-width">
+          <mat-select [(ngModel)]="model.stb" name="stb" placeholder="Additonal STB (8083)">
+            <mat-option *ngFor="let index of count" [value]="index">{{ index }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-form-field class="rebate-full-width">
-          <input [(ngModel)]="model.amount" name="amount" mdInput placeholder="Bill Amount" >
-        </md-form-field>
+        <mat-form-field class="rebate-full-width">
+          <mat-select [(ngModel)]="model.pvr" name="pvr" placeholder="Additonal PVR (9000)">
+            <mat-option *ngFor="let index of count" [value]="index">{{ index }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
-    <md-form-field class="rebate-full-width">
-      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.description" name="description" placeholder="Description of the issue"></textarea>
-    </md-form-field>
-    <md-form-field class="rebate-full-width">
-      <textarea mdInput mdTextareaAutosize [(ngModel)]="model.rebate" name="rebate" placeholder="Rebate Calculations"></textarea>
-    </md-form-field>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <mat-form-field class="rebate-full-width">
+          <input [(ngModel)]="model.invoice" name="invoice" matInput placeholder="Bill Invoice" >
+        </mat-form-field>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <mat-form-field class="rebate-full-width">
+          <input [(ngModel)]="model.amount" name="amount" matInput placeholder="Bill Amount" >
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-form-field class="rebate-full-width">
+      <textarea matInput matTextareaAutosize [(ngModel)]="model.description" name="description" placeholder="Description of the issue"></textarea>
+    </mat-form-field>
+    <mat-form-field class="rebate-full-width">
+      <textarea matInput matTextareaAutosize [(ngModel)]="model.rebate" name="rebate" placeholder="Rebate Calculations"></textarea>
+    </mat-form-field>
 
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
-    <md-card>
-      <md-card-title>{{title}} Template Preview</md-card-title>
-      <md-card-content>
-        <md-form-field class="rebate-full-width">
-          <textarea #rebate mdInput mdTextareaAutosize readonly>Existing Package: {{model.servicePackage}}
+    <mat-card>
+      <mat-card-title>{{title}} Template Preview</mat-card-title>
+      <mat-card-content>
+        <mat-form-field class="rebate-full-width">
+          <textarea #rebate matInput matTextareaAutosize readonly>Existing Package: {{model.servicePackage}}
 
 Additional Boxes (8083): {{model.stb}}
 
@@ -80,12 +86,12 @@ Description of the issue: {{model.description}}
 
 Rebate Calculation done by professional: {{model.rebate}}
           </textarea>
-        </md-form-field>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button [ngxClipboard]='rebate'>COPY</button>
-        <button md-button (click)='reset()'>CLEAR</button>
-      </md-card-actions>
-    </md-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngxClipboard]='rebate'>COPY</button>
+        <button mat-button (click)='reset()'>CLEAR</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

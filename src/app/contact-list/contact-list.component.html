@@ -1,209 +1,209 @@
 <div>
-  <h1 md-dialog-title>Contact List</h1>
+  <h1 mat-dialog-title>Contact List</h1>
 </div>
-<md-dialog-content>
+<mat-dialog-content>
   <br>
-  <md-accordion class="headers-align">
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+  <mat-accordion class="headers-align">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Contact Centre
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           Hunt: 5301
-          <md-icon>contacts</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-        <h3 md-subheader>Leaders</h3>
-        <md-list-item *ngFor="let person of contactCentreLeaders">
-          <md-icon md-list-icon>supervisor_account</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-        <md-divider></md-divider>
-        <h3 md-subheader>Senior Technical Support Professionals</h3>
-        <md-list-item *ngFor="let person of seniorTSP">
-          <md-icon md-list-icon>build</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-        <md-divider></md-divider>
-        <h3 md-subheader>Technical Support Professionals</h3>
-        <md-list-item *ngFor="let person of tsp">
-          <md-icon md-list-icon>build</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-        <md-divider></md-divider>
-        <h3 md-subheader>Customer Support Professionals</h3>
-        <md-list-item *ngFor="let person of csp">
-          <md-icon md-list-icon>face</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-      </md-list>
-    </md-expansion-panel>
+          <mat-icon>contacts</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <h3 mat-subheader>Leaders</h3>
+        <mat-list-item *ngFor="let person of contactCentreLeaders">
+          <mat-icon mat-list-icon>supervisor_account</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Senior Technical Support Professionals</h3>
+        <mat-list-item *ngFor="let person of seniorTSP">
+          <mat-icon mat-list-icon>build</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Technical Support Professionals</h3>
+        <mat-list-item *ngFor="let person of tsp">
+          <mat-icon mat-list-icon>build</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Customer Support Professionals</h3>
+        <mat-list-item *ngFor="let person of csp">
+          <mat-icon mat-list-icon>face</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
 
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Dispatch
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           Hunt: 1999
-          <md-icon>local_shipping</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-        <h3 md-subheader>Dispatchers</h3>
-        <md-list-item *ngFor="let person of dispatch">
-            <md-icon md-list-icon>local_shipping</md-icon>
-            <h4 md-line>{{person.employeeName}}</h4>
-            <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-      </md-list>
-    </md-expansion-panel>
+          <mat-icon>local_shipping</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <h3 mat-subheader>Dispatchers</h3>
+        <mat-list-item *ngFor="let person of dispatch">
+            <mat-icon mat-list-icon>local_shipping</mat-icon>
+            <h4 mat-line>{{person.employeeName}}</h4>
+            <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
 
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Finance & Accounting  
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           <hr>
-        <md-icon>account_balance</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-        <md-list-item *ngFor="let person of finance">
-          <md-icon md-list-icon>account_balance</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>{{person.position}}</p>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-      </md-list>
-    </md-expansion-panel>
+        <mat-icon>account_balance</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <mat-list-item *ngFor="let person of finance">
+          <mat-icon mat-list-icon>account_balance</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>{{person.position}}</p>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
 
-    <md-expansion-panel>
-        <md-expansion-panel-header>
-          <md-panel-title>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
             Human Resources
-          </md-panel-title>
-          <md-panel-description>
+          </mat-panel-title>
+          <mat-panel-description>
             <hr>
-          <md-icon>people</md-icon>
-          </md-panel-description>
-        </md-expansion-panel-header>
-        <md-list>
-          <md-list-item *ngFor="let person of hr">
-            <md-icon md-list-icon>people</md-icon>
-            <h4 md-line>{{person.employeeName}}</h4>
-            <p md-line>{{person.position}}</p>
-            <p md-line>Extension: {{person.extension}}</p>
-          </md-list-item>
-        </md-list>
-      </md-expansion-panel>
+          <mat-icon>people</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item *ngFor="let person of hr">
+            <mat-icon mat-list-icon>people</mat-icon>
+            <h4 mat-line>{{person.employeeName}}</h4>
+            <p mat-line>{{person.position}}</p>
+            <p mat-line>Extension: {{person.extension}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
 
-    <md-expansion-panel>
-        <md-expansion-panel-header>
-          <md-panel-title>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
             I.T
-          </md-panel-title>
-          <md-panel-description>
+          </mat-panel-title>
+          <mat-panel-description>
             <hr>
-            <md-icon>computer</md-icon>
-          </md-panel-description>
-        </md-expansion-panel-header>
-        <md-list>
-            <md-list-item *ngFor="let person of it">
-              <md-icon md-list-icon>computer</md-icon>
-              <h4 md-line>{{person.employeeName}}</h4>
-              <p md-line>Extension: {{person.extension}}</p>
-            </md-list-item>
-          </md-list>
-      </md-expansion-panel>
+            <mat-icon>computer</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item *ngFor="let person of it">
+              <mat-icon mat-list-icon>computer</mat-icon>
+              <h4 mat-line>{{person.employeeName}}</h4>
+              <p mat-line>Extension: {{person.extension}}</p>
+            </mat-list-item>
+          </mat-list>
+      </mat-expansion-panel>
 
-      <md-expansion-panel>
-          <md-expansion-panel-header>
-            <md-panel-title>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
               Miscellaneous
-            </md-panel-title>
-            <md-panel-description>
+            </mat-panel-title>
+            <mat-panel-description>
               <hr>
-            <!-- <md-icon>settings</md-icon> -->
-            </md-panel-description>
-          </md-expansion-panel-header>
-          <md-list>
-            <md-list-item *ngFor="let person of misc">
-              <!-- <md-icon md-list-icon>build</md-icon> -->
-              <h4 md-line>{{person.employeeName}}</h4>
-              <p md-line>{{person.position}}</p>
-              <p md-line>Extension: {{person.extension}}</p>
-            </md-list-item>
-          </md-list>
-        </md-expansion-panel>
+            <!-- <mat-icon>settings</mat-icon> -->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-list>
+            <mat-list-item *ngFor="let person of misc">
+              <!-- <mat-icon mat-list-icon>build</mat-icon> -->
+              <h4 mat-line>{{person.employeeName}}</h4>
+              <p mat-line>{{person.position}}</p>
+              <p mat-line>Extension: {{person.extension}}</p>
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
 
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           NOC
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           <hr>
-        <md-icon>settings</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-        <md-list-item *ngFor="let person of noc">
-          <md-icon md-list-icon>build</md-icon>
-          <h4 md-line>{{person.employeeName}}</h4>
-          <p md-line>Extension: {{person.extension}}</p>
-        </md-list-item>
-      </md-list>
-    </md-expansion-panel>
+        <mat-icon>settings</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <mat-list-item *ngFor="let person of noc">
+          <mat-icon mat-list-icon>build</mat-icon>
+          <h4 mat-line>{{person.employeeName}}</h4>
+          <p mat-line>Extension: {{person.extension}}</p>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
 
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Sales (Executive)
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           <hr>
-          <md-icon>business</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-          <md-list-item *ngFor="let person of salesExecutive">
-            <md-icon md-list-icon>business</md-icon>
-            <h4 md-line>{{person.employeeName}}</h4>
-            <p md-line>Extension: {{person.extension}}</p>
-          </md-list-item>
-        </md-list>
-    </md-expansion-panel>
+          <mat-icon>business</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+          <mat-list-item *ngFor="let person of salesExecutive">
+            <mat-icon mat-list-icon>business</mat-icon>
+            <h4 mat-line>{{person.employeeName}}</h4>
+            <p mat-line>Extension: {{person.extension}}</p>
+          </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
 
-    <md-expansion-panel>
-      <md-expansion-panel-header>
-        <md-panel-title>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Sales (Residential)
-        </md-panel-title>
-        <md-panel-description>
+        </mat-panel-title>
+        <mat-panel-description>
           Hunt: 1499
-          <md-icon>shopping_cart</md-icon>
-        </md-panel-description>
-      </md-expansion-panel-header>
-      <md-list>
-          <md-list-item *ngFor="let person of salesResidential">
-            <md-icon md-list-icon>shopping_cart</md-icon>
-            <h4 md-line>{{person.employeeName}}</h4>
-            <p md-line>Extension: {{person.extension}}</p>
-          </md-list-item>
-        </md-list>
-    </md-expansion-panel>
+          <mat-icon>shopping_cart</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+          <mat-list-item *ngFor="let person of salesResidential">
+            <mat-icon mat-list-icon>shopping_cart</mat-icon>
+            <h4 mat-line>{{person.employeeName}}</h4>
+            <p mat-line>Extension: {{person.extension}}</p>
+          </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
 
-  </md-accordion>
+  </mat-accordion>
   <br>
-</md-dialog-content>
-<md-dialog-actions>
-    <button md-button [md-dialog-close]="true">Close</button>
-</md-dialog-actions>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="true">Close</button>
+</mat-dialog-actions>

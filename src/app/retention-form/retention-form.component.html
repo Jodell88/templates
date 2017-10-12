@@ -6,51 +6,51 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-form-field class="retention-full-width">
-          <input [(ngModel)]="model.existingPackage" name="package" mdInput placeholder="Existing Package">
-        </md-form-field>
+        <mat-form-field class="retention-full-width">
+          <input [(ngModel)]="model.existingPackage" name="package" matInput placeholder="Existing Package">
+        </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-form-field class="retention-full-width">
-          <input [(ngModel)]="model.promotion" name="promotion" mdInput placeholder="Promotion Applied" >
-        </md-form-field>
+        <mat-form-field class="retention-full-width">
+          <input [(ngModel)]="model.promotion" name="promotion" matInput placeholder="Promotion Applied" >
+        </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-form-field class="retention-full-width">
-          <input [(ngModel)]="model.balance" name="balance" mdInput placeholder="Outstanding Figure (from tableau)">
-        </md-form-field>
+        <mat-form-field class="retention-full-width">
+          <input [(ngModel)]="model.balance" name="balance" matInput placeholder="Outstanding Figure (from tableau)">
+        </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex>
-        <md-form-field class="retention-full-width">
-          <textarea [(ngModel)]="model.reason" name="reason" mdInput mdTextareaAutosize placeholder="Reason for cancellation" ></textarea>
-        </md-form-field>
+        <mat-form-field class="retention-full-width">
+          <textarea [(ngModel)]="model.reason" name="reason" matInput matTextareaAutosize placeholder="Reason for cancellation" ></textarea>
+        </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex>
-        <md-form-field class="retention-full-width">
-          <textarea [(ngModel)]="model.save" name="save" mdInput mdTextareaAutosize placeholder="TSP/CSP Save attempt" ></textarea>
-        </md-form-field>
+        <mat-form-field class="retention-full-width">
+          <textarea [(ngModel)]="model.save" name="save" matInput matTextareaAutosize placeholder="TSP/CSP Save attempt" ></textarea>
+        </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
-      <div fxFlex mdTooltip=" Please note any additional case created regarding a save attempt must be attached to the Retention parent case as a Child case.">
-        <md-form-field class="retention-full-width">
-          <input [(ngModel)]="model.saveCase" name="saveCase" mdInput placeholder="Case Number created due to save attempt" >
-        </md-form-field>
+      <div fxFlex matTooltip=" Please note any additional case created regarding a save attempt must be attached to the Retention parent case as a Child case.">
+        <mat-form-field class="retention-full-width">
+          <input [(ngModel)]="model.saveCase" name="saveCase" matInput placeholder="Case Number created due to save attempt" >
+        </mat-form-field>
       </div>
     </div>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
-    <md-card>
-      <md-card-title>{{title}} Template Preview</md-card-title>
-      <md-card-content>
-        <md-form-field class="retention-full-width">
-          <textarea #retention mdInput mdTextareaAutosize readonly>Existing Package: {{model.existingPackage}}
+    <mat-card>
+      <mat-card-title>{{title}} Template Preview</mat-card-title>
+      <mat-card-content>
+        <mat-form-field class="retention-full-width">
+          <textarea #retention matInput matTextareaAutosize readonly>Existing Package: {{model.existingPackage}}
 
 Promotion Applied: {{model.promotion}}
 
@@ -62,12 +62,12 @@ TSP/CSP Save attempt: {{model.save}}
 
 Case Number created due to save attempt: {{model.saveCase}}
           </textarea>
-        </md-form-field>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button [ngxClipboard]='retention'>COPY</button>
-        <button md-button (click)="reset()">CLEAR</button>
-      </md-card-actions>
-    </md-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngxClipboard]='retention'>COPY</button>
+        <button mat-button (click)="reset()">CLEAR</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

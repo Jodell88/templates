@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { ContactListComponent } from '../contact-list/contact-list.component';
 
 
@@ -10,7 +10,7 @@ import { ContactListComponent } from '../contact-list/contact-list.component';
 })
 export class HeaderbarComponent implements OnInit {
 
-  constructor(public contactList: MdDialog) { }
+  constructor(public contactList: MatDialog) { }
 
   ngOnInit() {
   }

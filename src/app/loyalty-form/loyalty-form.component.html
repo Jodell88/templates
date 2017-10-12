@@ -7,41 +7,41 @@
     <form>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-form-field class="loyal-full-width">
-            <input [(ngModel)]="model.card" name="card" mdInput placeholder="Loyalty Card Number" >
-          </md-form-field>
+          <mat-form-field class="loyal-full-width">
+            <input [(ngModel)]="model.card" name="card" matInput placeholder="Loyalty Card Number" >
+          </mat-form-field>
         </div>
         <div fxFlexOffset=2% fxFlex=49%>
-          <md-form-field class="loyal-full-width">
-            <input [(ngModel)]="model.invoice" name="invoice" mdInput placeholder="Invoice Number" >
-          </md-form-field>
+          <mat-form-field class="loyal-full-width">
+            <input [(ngModel)]="model.invoice" name="invoice" matInput placeholder="Invoice Number" >
+          </mat-form-field>
         </div>
       </div>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <md-form-field class="loyal-full-width">
-            <input [(ngModel)]="model.amountPaid" name="amount" mdInput placeholder="Amount Paid" >
-          </md-form-field>
+          <mat-form-field class="loyal-full-width">
+            <input [(ngModel)]="model.amountPaid" name="amount" matInput placeholder="Amount Paid" >
+          </mat-form-field>
         </div>
         <div fxFlexOffset=2% fxFlex=49%>
-          <md-form-field class="loyal-full-width">
-            <input [(ngModel)]="model.date" name="date"  mdInput [mdDatepicker]="myDatepicker" placeholder="Date invoice Paid">
-            <md-datepicker-toggle mdSuffix [for]="myDatepicker"></md-datepicker-toggle>
-            <md-datepicker #myDatepicker></md-datepicker>
-          </md-form-field>          
+          <mat-form-field class="loyal-full-width">
+            <input [(ngModel)]="model.date" name="date"  matInput [matDatepicker]="myDatepicker" placeholder="Date invoice Paid">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+          </mat-form-field>          
         </div>
       </div>
-      <md-form-field class="loyal-full-width-height">
-        <textarea mdTextareaAutosize [(ngModel)]="model.description" name="description" mdInput placeholder="Description"></textarea>
-      </md-form-field>
+      <mat-form-field class="loyal-full-width-height">
+        <textarea matTextareaAutosize [(ngModel)]="model.description" name="description" matInput placeholder="Description"></textarea>
+      </mat-form-field>
     </form>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
-    <md-card>
-        <md-card-title>{{title}} Template Preview</md-card-title>
-      <md-card-content>
-        <md-form-field class="loyal-full-width-height">
-          <textarea #loyalty mdInput mdTextareaAutosize readonly>Loyalty Card Number: {{model.card}}
+    <mat-card>
+        <mat-card-title>{{title}} Template Preview</mat-card-title>
+      <mat-card-content>
+        <mat-form-field class="loyal-full-width-height">
+          <textarea #loyalty matInput matTextareaAutosize readonly>Loyalty Card Number: {{model.card}}
 
 Invoice Number: {{model.invoice}}
 
@@ -51,12 +51,12 @@ Amount Paid: ${{model.amountPaid}}
 
 Description: {{model.description}}
           </textarea>
-        </md-form-field>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button [ngxClipboard]='loyalty'>COPY</button>
-        <button md-button (click)='reset()'>CLEAR</button>
-      </md-card-actions>
-    </md-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngxClipboard]='loyalty'>COPY</button>
+        <button mat-button (click)='reset()'>CLEAR</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

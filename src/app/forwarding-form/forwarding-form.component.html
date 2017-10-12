@@ -7,46 +7,46 @@
     <form #portForwarding="ngForm">
       <h4 class="mat-h4">1. What are the ports that you need forwarded and to what IP address or addresses?</h4>
       <table class="forward-full-width" cellspacing="2"><tr>
-          <td><md-form-field class="forward-full-width" id="ports">
-            <input [(ngModel)]="model.ports" name="ports" mdInput placeholder="Ports" >
-          </md-form-field></td>
-          <td><md-form-field class="forward-full-width" id="ipaddress">
-            <input [(ngModel)]="model.ipaddress" name="ipaddress" mdInput required placeholder="IP Address">
-          </md-form-field></td>
+          <td><mat-form-field class="forward-full-width" id="ports">
+            <input [(ngModel)]="model.ports" name="ports" matInput placeholder="Ports" >
+          </mat-form-field></td>
+          <td><mat-form-field class="forward-full-width" id="ipaddress">
+            <input [(ngModel)]="model.ipaddress" name="ipaddress" matInput required placeholder="IP Address">
+          </mat-form-field></td>
         </tr></table>
       <p>
-        <md-form-field class="forward-full-width">
-          <textarea [(ngModel)]="model.dmz" name="dmz" mdInput mdTextareaAutosize placeholder="2. If it’s a DMZ request, what is the IP address that you need in the DMZ?"></textarea>
-        </md-form-field>
+        <mat-form-field class="forward-full-width">
+          <textarea [(ngModel)]="model.dmz" name="dmz" matInput matTextareaAutosize placeholder="2. If it’s a DMZ request, what is the IP address that you need in the DMZ?"></textarea>
+        </mat-form-field>
       </p>
       <p>
-        <md-form-field class="forward-full-width">
-          <textarea [(ngModel)]="model.connectedONT" name="ONT" mdInput mdTextareaAutosize placeholder="3. Is the DVR directly connected to the ONT?"></textarea>
-        </md-form-field>
+        <mat-form-field class="forward-full-width">
+          <textarea [(ngModel)]="model.connectedONT" name="ONT" matInput matTextareaAutosize placeholder="3. Is the DVR directly connected to the ONT?"></textarea>
+        </mat-form-field>
       </p>
       <p>
-        <md-form-field class="forward-full-width">
-          <textarea [(ngModel)]="model.staticIP" name="staticIP" mdInput mdTextareaAutosize placeholder="4. If Yes to question 3, then did you set a static IP address on the DVR or is it DHCP?"></textarea>
-        </md-form-field>
+        <mat-form-field class="forward-full-width">
+          <textarea [(ngModel)]="model.staticIP" name="staticIP" matInput matTextareaAutosize placeholder="4. If Yes to question 3, then did you set a static IP address on the DVR or is it DHCP?"></textarea>
+        </mat-form-field>
       </p>
       <p>
-        <md-form-field class="forward-full-width">
-          <textarea [(ngModel)]="model.router" name="router" mdInput mdTextareaAutosize placeholder="5. If No to question 3, then is it connected to a router or switch?"></textarea>
-        </md-form-field>
+        <mat-form-field class="forward-full-width">
+          <textarea [(ngModel)]="model.router" name="router" matInput matTextareaAutosize placeholder="5. If No to question 3, then is it connected to a router or switch?"></textarea>
+        </mat-form-field>
       </p>
       <p>
-        <md-form-field class="forward-full-width">
-          <textarea [(ngModel)]="model.routerIP" name="routerIP" mdInput mdTextareaAutosize placeholder="6. If DVR is connected directly to a router, then we need the IP address of the router and the ports?"></textarea>
-        </md-form-field>
+        <mat-form-field class="forward-full-width">
+          <textarea [(ngModel)]="model.routerIP" name="routerIP" matInput matTextareaAutosize placeholder="6. If DVR is connected directly to a router, then we need the IP address of the router and the ports?"></textarea>
+        </mat-form-field>
       </p>
     </form>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
-    <md-card>
-      <md-card-title>{{title}} Template Preview</md-card-title>
-      <md-card-content>
-        <md-form-field class="forward-full-width">
-          <textarea #forward mdInput mdTextareaAutosize readonly>What are the ports that you need forwarded and to what IP address or addresses?
+    <mat-card>
+      <mat-card-title>{{title}} Template Preview</mat-card-title>
+      <mat-card-content>
+        <mat-form-field class="forward-full-width">
+          <textarea #forward matInput matTextareaAutosize readonly>What are the ports that you need forwarded and to what IP address or addresses?
 Ports: {{model.ports}}    IP Address: {{ model.ipaddress }}
 
 If it’s a DMZ request, what is the IP address that you need in the DMZ?
@@ -64,18 +64,18 @@ If No to question 3, then is it connected to a router or switch?
 If DVR is connected directly to a router, then we need the IP address of the router and the ports?
 {{ model.routerIP }}
           </textarea>
-        </md-form-field>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button [ngxClipboard]='forward'>COPY</button>
-        <button md-button (click)="reset()">CLEAR</button>
-      </md-card-actions>
-    </md-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngxClipboard]='forward'>COPY</button>
+        <button mat-button (click)="reset()">CLEAR</button>
+      </mat-card-actions>
+    </mat-card>
 
     <!-- <div fxLayout="row">
-      <button md-raised-button [ngxClipboard]='forward'>Copy</button>
+      <button mat-raised-button [ngxClipboard]='forward'>Copy</button>
       <div fxFlexOffset="5%">
-        <button md-raised-button (click)="reset()">Clear</button>
+        <button mat-raised-button (click)="reset()">Clear</button>
       </div>
     </div> -->
   </div>

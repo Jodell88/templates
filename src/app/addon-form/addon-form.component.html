@@ -6,36 +6,42 @@
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-select multiple [(ngModel)]="model.addon" name="addon" placeholder="Add-on Requested" class="addon-full-width">
-          <md-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</md-option>
-        </md-select>
+        <mat-form-field class="addon-full-width">
+          <mat-select multiple [(ngModel)]="model.addon" name="addon" placeholder="Add-on Requested">
+            <mat-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-select [(ngModel)]="model.promotion" name="promotion" placeholder="Promotional Period" class="addon-full-width">
-          <md-option *ngFor="let promotion of promotions" [value]="promotion.value">{{ promotion.value }}</md-option>
-        </md-select>
+        <mat-form-field class="addon-full-width">
+          <mat-select [(ngModel)]="model.promotion" name="promotion" placeholder="Promotional Period" >
+            <mat-option *ngFor="let promotion of promotions" [value]="promotion.value">{{ promotion.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
     <br>
     <div fxLayout="row">
       <div fxFlex="49%">
-        <md-form-field class="addon-full-width">
-          <input [(ngModel)]="model.basePackage" name="package" mdInput placeholder="Base Package" >
-        </md-form-field>
+        <mat-form-field class="addon-full-width">
+          <input [(ngModel)]="model.basePackage" name="package" matInput placeholder="Base Package" >
+        </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">
-        <md-select [(ngModel)]="model.verified" name="verified" placeholder="I.D Verified" class="addon-full-width">
-          <md-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</md-option>
-        </md-select>
+        <mat-form-field class="addon-full-width">
+          <mat-select [(ngModel)]="model.verified" name="verified" placeholder="I.D Verified">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
-    <md-card>
-      <md-card-title>{{title}} Template Preview</md-card-title>
-      <md-card-content>
-        <md-form-field class="addon-full-width">
-          <textarea #addon mdInput mdTextareaAutosize readonly>Add-on Requested: {{model.addon}}
+    <mat-card>
+      <mat-card-title>{{title}} Template Preview</mat-card-title>
+      <mat-card-content>
+        <mat-form-field class="addon-full-width">
+          <textarea #addon matInput matTextareaAutosize readonly>Add-on Requested: {{model.addon}}
 
 Promotional Period: {{model.promotion}}
 
@@ -43,12 +49,12 @@ Base Package: {{model.basePackage}}
 
 I.D. Verified: {{model.verified}}
           </textarea>
-        </md-form-field>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button [ngxClipboard]='addon'>COPY</button>
-        <button md-button (click)="reset()">CLEAR</button>
-      </md-card-actions>
-    </md-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngxClipboard]='addon'>COPY</button>
+        <button mat-button (click)="reset()">CLEAR</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
