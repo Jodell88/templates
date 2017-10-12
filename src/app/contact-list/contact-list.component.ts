@@ -44,6 +44,7 @@ export class ContactListComponent implements OnInit {
   ]
 
   dispatch = [
+    {employeeName: 'Bridget Rattan', position: 'Manager, Planning and Design', extension: '2940'},
     {employeeName: 'Allyster Duntin', position: 'Dispatcher', extension: '2417'},
     {employeeName: 'Don-Leon Powder', position: 'Dispatcher', extension: '2434'},
     {employeeName: 'Keron Ragbirsingh', position: 'Dispatcher', extension: '2413'},
@@ -84,7 +85,6 @@ export class ContactListComponent implements OnInit {
   ]
 
   misc = [    
-    {employeeName: 'Nekita Skair', position: 'Human Resource Assistant', extension: '2801'},
     {employeeName: 'Mickal Pierre', position: 'Marketing Assistant', extension: '2197'},
     {employeeName: 'Quanah Patino', position: 'Product Lead', extension: '2105'},    
     {employeeName: 'Vanessa Mohammed', position: 'Director of First Impression', extension: '3004'},
