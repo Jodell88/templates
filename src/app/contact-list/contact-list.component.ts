@@ -27,9 +27,8 @@ export class ContactListComponent implements OnInit {
 
   tsp= [
     {employeeName: 'Andrew Lewis', position: 'Technical Support Professional', extension: '2464'},
-    {employeeName: 'Christopher Seetahal', position: 'Technical Support Professional', extension: '2464'},
+    {employeeName: 'Christopher Seetahal', position: 'Technical Support Professional', extension: '2410'},
     {employeeName: 'Jevon Duncan', position: 'Technical Support Professional', extension: '2462'},
-    {employeeName: 'Levi Hinds', position: 'Technical Support Professional', extension: '2405'},
     {employeeName: 'Nafeeza Ali', position: 'Technical Support Professional', extension: '2463'},
     {employeeName: 'Nicholas De Souza', position: 'Technical Support Professional', extension: '2466'},
     {employeeName: 'Nivash Roopchansingh', position: 'Technical Support Professional', extension: '2411'},    
