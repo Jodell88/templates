@@ -39,7 +39,7 @@ export class ContactListComponent implements OnInit {
     
   csp=[
     {employeeName: 'Cassie Browne', position: 'Customer Support Professional', extension: '2422'},
-    {employeeName: 'Isaiah Farrell', position: 'Customer Support Professional', extension: '2422'},
+    {employeeName: 'Isaiah Farrell', position: 'Customer Support Professional', extension: '2428'},
     {employeeName: 'Tiffany Lewis', position: 'Customer Support Professional', extension: '2433'},
   ]
 
