@@ -38,8 +38,14 @@
       </div>
       <div fxLayout="row">
         <div fxFlex="49%">
-          <mat-form-field class="relocation-full-width">
+          <!-- <mat-form-field class="relocation-full-width">
             <input [(ngModel)]="model.newPackage" name="newPackage" matInput placeholder="New Package Requested" >
+          </mat-form-field> -->
+          <mat-form-field class="relocation-full-width">
+            <input [(ngModel)]="model.newPackage" name="newPackage" matInput placeholder="New Package Requested" [matAutocomplete]="requested">
+            <mat-autocomplete #requested="matAutocomplete">
+                <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
+            </mat-autocomplete>
           </mat-form-field>
         </div>
         <div fxFlexOffset="2%" fxFlex="49%">
