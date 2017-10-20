@@ -31,7 +31,8 @@ export class ContactListComponent implements OnInit {
     {employeeName: 'Jevon Duncan', position: 'Technical Support Professional', extension: '2462'},
     {employeeName: 'Nafeeza Ali', position: 'Technical Support Professional', extension: '2463'},
     {employeeName: 'Nicholas De Souza', position: 'Technical Support Professional', extension: '2466'},
-    {employeeName: 'Nivash Roopchansingh', position: 'Technical Support Professional', extension: '2411'},    
+    {employeeName: 'Nivash Roopchansingh', position: 'Technical Support Professional', extension: '2411'},
+    {employeeName: 'Rhesa-Addi Kendall', position: 'Technical Support Professional', extension: '24**'},  
     {employeeName: 'Peter Hosein', position: 'Technical Support Professional', extension: '2423'},
     {employeeName: 'Yinka-Marie Jones', position: 'Technical Support Professional', extension: '2430'}
   ]
