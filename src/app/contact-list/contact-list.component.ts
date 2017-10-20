@@ -73,8 +73,8 @@ export class ContactListComponent implements OnInit {
 
   finance = [
     {employeeName: 'Shelly-Ann Narine', position: 'Billing Assurance Officer', extension: '2703'},
-    {employeeName: 'Robert Farrier', position: 'Manager, Credit & Collections', extension: '2703'},
-    {employeeName: 'Vrindra Moonasar', position: 'Credit Assistant', extension: '2703'},
+    {employeeName: 'Robert Farrier', position: 'Manager, Credit & Collections', extension: '2706'},
+    {employeeName: 'Vrinda Moonasar', position: 'Credit Assistant', extension: '2707'},
   ]
 
   it = [
