@@ -8,7 +8,7 @@
       <div fxFlex="49%">
         <mat-form-field class="addon-full-width">
           <mat-select multiple [(ngModel)]="model.addon" name="addon" placeholder="Add-on Requested">
-            <mat-option *ngFor="let addon of addons" [value]="addon.value">{{ addon.value }}</mat-option>
+            <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -24,7 +24,10 @@
     <div fxLayout="row">
       <div fxFlex="49%">
         <mat-form-field class="addon-full-width">
-          <input [(ngModel)]="model.basePackage" name="package" matInput placeholder="Base Package" >
+          <input [(ngModel)]="model.basePackage" name="package" matInput placeholder="Base Package" [matAutocomplete]="base">
+          <mat-autocomplete #base="matAutocomplete">
+              <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
+          </mat-autocomplete>
         </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">

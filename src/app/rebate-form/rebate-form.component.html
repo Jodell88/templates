@@ -16,7 +16,10 @@
     <div fxLayout="row">
       <div fxFlex="49%">
         <mat-form-field class="rebate-full-width">
-          <input [(ngModel)]="model.servicePackage" name="package" matInput placeholder="Package Subscribed" >
+          <input [(ngModel)]="model.servicePackage" name="package" matInput placeholder="Package Subscribed" [matAutocomplete]="subscribed">
+          <mat-autocomplete #subscribed="matAutocomplete">
+              <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
+          </mat-autocomplete>
         </mat-form-field>
       </div>
       <div fxFlexOffset="2%" fxFlex="49%">

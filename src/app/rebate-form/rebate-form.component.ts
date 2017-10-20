@@ -29,6 +29,7 @@ export class RebateFormComponent implements OnInit {
   ngOnInit() {
     this.cycles = this.cycleService.cycles;
     this.addons = this.packageService.addons;
+    this.packages = this.packageService.packages;
   }
 
   title = "Rebate"
@@ -42,6 +43,7 @@ export class RebateFormComponent implements OnInit {
   }
 
   addons: any = [];
+  packages: any = [];
 
   count = [0,1,2,3,4,5,6,7,8,9,10,11,12]
 

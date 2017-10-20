@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PackageDataService } from '../package-data.service';
 
 export class Addons{
   constructor(
@@ -16,9 +17,11 @@ export class Addons{
 })
 export class AddonFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private packageService:PackageDataService) { }
 
   ngOnInit() {
+    this.addons = this.packageService.addons;
+    this.packages = this.packageService.packages;
   }
 
   model = new Addons()
@@ -29,17 +32,8 @@ export class AddonFormComponent implements OnInit {
 
   title = "Add-on Package Request"
 
-  addons = [
-    {value: " Catch Up TV: Watch More"},
-    {value: " Catch Up TV: Free"},
-    {value: " FOX Premium"},
-    {value: " HBO"},
-    {value: " HBO & MAX Combo"},
-    {value: " MAX"},
-    {value: " MaxPak"},
-    {value: " Premium Sports"},
-    {value: " Watch Adult"},
-  ]
+  addons: any= [];
+  packages: any= [];
 
   promotions = [
     {value: "N/A"},
