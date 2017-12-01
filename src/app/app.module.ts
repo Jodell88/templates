@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgSelectOption } from '@angular/forms';
 import { RouterModule,  RouteReuseStrategy } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule, MatToolbarModule,
          MatSidenavModule, MatListModule, MatInputModule, MatCardModule, MatDatepickerModule,
          MatNativeDateModule, MatSlideToggleModule, DateAdapter, MatTooltipModule, MatIconModule,
-         MatMenuModule, MatAutocompleteModule, MatDialogModule, MatExpansionModule } from '@angular/material';
+         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -31,6 +32,7 @@ import { RebateFormComponent } from './rebate-form/rebate-form.component';
 import { HeaderbarComponent } from './headerbar/headerbar.component';
 import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { PricingListComponent } from './pricing-list/pricing-list.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     RebateFormComponent,
     HeaderbarComponent,
     HomeComponent,
-    ContactListComponent
+    ContactListComponent,
+    PricingListComponent
   ],
   imports: [
     BrowserModule,
@@ -124,7 +127,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule,
     MatCardModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule,
     MatTooltipModule, MatIconModule, MatMenuModule, MatAutocompleteModule, MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule, MatTableModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},
@@ -134,7 +137,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     PackageDataService
   ],
   entryComponents: [
-    ContactListComponent
+    ContactListComponent,
   ],
   bootstrap: [AppComponent]
 })
