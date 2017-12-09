@@ -64,4 +64,36 @@ export class PackageDataService {
 
   ]
 
+  VAT = 1.125;
+  
+  CALL_MASTER = [
+    {name: "Caller ID", price: 14 * this.VAT, interval: "Month", description: "Allows a person to identify the number of the phone from which the call is being made"},
+    {name: "Alert Call", price: 3 * this.VAT, interval: "Month", description: "Generates a call to a pre-designed number for help without dialing"},
+    {name: "Automatic Redial", price: 14 * this.VAT, interval: "Month", description: "Automatically redials a number that is busy until the line is free"},
+    {name: "Call Forward Don't Answer", price: 6 * this.VAT, interval: "Month", description: "Calls automatically transferred from your phone to a pre-designated number upon no answer"},
+    {name: "Call forward Busy", price: 6 * this.VAT, interval: "Month", description: "Calls automatically transferred from your phone to a pre-designated number upon no answer"},
+    {name: "Call trace", price: 5 * this.VAT, interval: "Activation", description: "Callers who activate Hold Number Delivery can have their number traced by for the persons receiving the call"},
+    {name: "Call trace - noama", price: 5 * this.VAT, interval: "Activation", description: "Callers who activate Hold Number Delivery can have their number traced by for the persons receiving the call"},
+    {name: "Hold call waiting", price: 3 * this.VAT, interval: "Month", description: "If a person has call waiting, this option allows to temporarily cancel \"call waiting\" feature on a \"per call\' basis"},
+    {name: "My call 1st", price: 8 * this.VAT, interval: "Month", description: "Allows a person to tell who an incoming call is for by listening to its unique ring"},
+    {name: "My call 2nd", price: 2 * this.VAT, interval: "Month", description: "Allows a person to tell who an incoming call is for by listening to its unique ring"},
+    {name: "My call 3rd", price: 2 * this.VAT, interval: "Month", description: "Allows a person to tell who an incoming call is for by listening to its unique ring"},
+    {name: "Return call", price: 14 * this.VAT, interval: "Month", description: "Allows a person to know who called when the telephone stops ringing before you have had time to answer"},
+    {name: "Speed calling 30", price: 6 * this.VAT, interval: "Month", description: "A user can program up to 30 frequently used numbers into the telephone for quick calling"},
+    {name: "Speed calling 8", price: 8 * this.VAT, interval: "Month", description: "A user can program up to 8 frequently used numbers into the telephone for quick calling"},
+    {name: "Anonymous caller rejection", price: 14 * this.VAT, interval: "Month", description: "Automatically rejects anonymous calls"},
+    {name: "Call forwarding", price: 6 * this.VAT, interval: "Month", description: "Manually sets calls to be forwarded to another number"},
+    {name: "Call Waiting", price: 6 * this.VAT, interval: "Month", description: "Allows two incoming calls on one line"},
+    {name: "Three way calling", price: 6 * this.VAT, interval: "Month", description: "Allows three parties together on three different phones for personal or business purposes"},
+    {name: "Voice Mail Basic", price: 12 * this.VAT, interval: "Month", description: ""},
+    {name: "Voice Mail Full Basic", price: 15 * this.VAT, interval: "Month", description: ""},
+    {name: "Voice Mail Plus", price: 25 * this.VAT, interval: "Month", description: ""},
+    {name: "Voice Security package with Caller ID", price: 19 * this.VAT, interval: "Month", description: "Package with 4 features of Caller ID, Call waiting, Hold number delivery and Alert call"},
+    {name: "Voice Security package with Return call", price: 19 * this.VAT, interval: "Month", description: "Package with 4 features of Return call, Call waiting, Hold number delivery and Alert call"},
+    {name: "Voice Personality package with Caller ID", price: 19 * this.VAT, interval: "Month", description: "Package with 4 features of Caller ID, Call waiting, 3 way calling and Speed calling (8)"},
+    {name: "Voice Personality package with Return call", price: 19 * this.VAT, interval: "Month", description: "Package with 4 features of Return call, Call waiting, 3 way calling and Speed calling (8)"},
+    {name: "Voice Conference package with Caller ID", price: 19 * this.VAT, interval: "Month", description: "Package with 4 features of Caller ID, Call waiting, 3 way calling and Call forwarding"},
+    {name: "Voice Conference package with Return Call", price: 18 * this.VAT, interval: "Month", description: "Package with 4 features of Return call, Call waiting, 3 way calling and Call forwarding"},  
+  ]
+
 }
