@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ContactListComponent } from '../contact-list/contact-list.component';
+// import { CallMasterPricingComponent } from '../call-master-pricing/call-master-pricing.component';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { ContactListComponent } from '../contact-list/contact-list.component';
 })
 export class HeaderbarComponent implements OnInit {
 
-  constructor(public contactList: MatDialog) { }
+  constructor(public contactList: MatDialog, public callMaster: MatDialog) { }
 
   ngOnInit() {
   }
@@ -30,6 +31,13 @@ export class HeaderbarComponent implements OnInit {
       // height: '90%',
       width: '40%',
     });
+  }
+
+  openCallMaster() {
+    // let dialogRef = this.callMaster.open(CallMasterPricingComponent, {
+    //   // height: '90%',
+    //   width: '40%',
+    // });
   }
 
 }
