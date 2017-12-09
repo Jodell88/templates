@@ -18,9 +18,13 @@
         <mat-icon>place</mat-icon>
         <span>Surepay Map</span>
       </button>
-      <button mat-menu-item (click)="openDialog()">
+      <button mat-menu-item disabled (click)="openDialog()">
         <mat-icon>account_circle</mat-icon>
         <span>Contact List</span>
+      </button>
+      <button mat-menu-item disabled (click)="openCallMaster()">
+        <mat-icon>account_circle</mat-icon>
+        <span>Call Master Prices</span>
       </button>
       <button mat-menu-item disabled>
         <mat-icon>monetization_on</mat-icon>
