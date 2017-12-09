@@ -25,7 +25,7 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <mat-form-field class="rebate-full-width">
           <mat-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)">
-            <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
+            <mat-option *ngFor="let addon of addons" [value]="addon">{{ addon.name }}</mat-option>
           </mat-select>
       </mat-form-field>
       </div>
@@ -64,6 +64,68 @@
     <mat-form-field class="rebate-full-width">
       <textarea matInput matTextareaAutosize [(ngModel)]="model.rebate" name="rebate" placeholder="Rebate Calculations"></textarea>
     </mat-form-field>
+    <br>
+    <!-- <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Rebate Calculator
+      </mat-expansion-panel-header>
+      <mat-slide-toggle>Same bundle as above?</mat-slide-toggle>
+      <br>
+      <div fxLayout="row">
+        <div fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <input [(ngModel)]="modelCalculator.serPackage" name="calcpackage" matInput placeholder="Package Subscribed" [matAutocomplete]="subscribed">
+            <mat-autocomplete #subscribed="matAutocomplete">
+                <mat-option *ngFor="let package of packages" [value]="package">{{ package.name }}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div fxFlexOffset="2%" fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <mat-select multiple [(ngModel)]="modelCalculator.addons" name="calcaddons" placeholder="Additonal Packages (Movies, etc)">
+              <mat-option *ngFor="let addon of addons" [value]="addon">{{ addon.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <mat-select [(ngModel)]="modelCalculator.stb" name="calcstb" placeholder="Additonal STB (8083)">
+              <mat-option *ngFor="let index of count" [value]="index">{{ index }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxFlexOffset="2%" fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <mat-select [(ngModel)]="modelCalculator.pvr" name="calcpvr" placeholder="Additonal PVR (9000)">
+              <mat-option *ngFor="let index of count" [value]="index">{{ index }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <input matInput [(ngModel)]="modelCalculator.startDate" name="startDate" [matDatepicker]="rebateStart" placeholder="Rebate start date">
+            <mat-datepicker-toggle matSuffix [for]="rebateStart"></mat-datepicker-toggle>
+            <mat-datepicker #rebateStart></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div fxFlexOffset="2%" fxFlex="49%">
+          <mat-form-field class="rebate-full-width">
+            <input matInput [(ngModel)]="modelCalculator.endDate" name="endDate" [matDatepicker]="rebateEnd" placeholder="Rebate end date">
+            <mat-datepicker-toggle matSuffix [for]="rebateEnd"></mat-datepicker-toggle>
+            <mat-datepicker #rebateEnd></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      {{ days }}
+      {{model.da}}
+      {{modelCalculator.startDate}}
+      <br>
+    </mat-expansion-panel> -->
+
 
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
