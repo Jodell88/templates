@@ -68,6 +68,7 @@ export class PackageDataService {
   
   CALL_MASTER = [
     {name: "Caller ID", price: 14 * this.VAT, interval: "Month", description: "Allows a person to identify the number of the phone from which the call is being made"},
+    {name: "Caller ID with Anonymous caller rejection", price: 14 * this.VAT, interval: "Month", description: "Allows a person to identify the number of the phone from which the call is being made"},
     {name: "Alert Call", price: 3 * this.VAT, interval: "Month", description: "Generates a call to a pre-designed number for help without dialing"},
     {name: "Automatic Redial", price: 14 * this.VAT, interval: "Month", description: "Automatically redials a number that is busy until the line is free"},
     {name: "Call Forward Don't Answer", price: 6 * this.VAT, interval: "Month", description: "Calls automatically transferred from your phone to a pre-designated number upon no answer"},

@@ -1,0 +1,80 @@
+<headerbar>
+  <span title>{{title}}</span>
+</headerbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <mat-form-field class="voice-full-width">
+          <mat-select multiple [(ngModel)]="model.featureAdded" name="added" placeholder="Feature Requested">
+            <mat-option *ngFor="let feature of features" [value]="feature.name">{{ feature.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <mat-form-field class="voice-full-width">
+          <mat-select [(ngModel)]="model.cost" name="cost" placeholder="Customer Agreed to Cost of Feature?">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <mat-form-field class="voice-full-width">
+          <mat-select [(ngModel)]="model.crm" name="crm" placeholder="Feature added in CRM?">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <mat-form-field class="voice-full-width">
+          <mat-select multiple [(ngModel)]="model.featureRemoved" name="removed" placeholder="Feature Requested to be Removed">
+            <mat-option *ngFor="let feature of features" [value]="feature.name">{{ feature.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="49%">
+        <mat-form-field class="voice-full-width">
+          <mat-select [(ngModel)]="model.verified" name="verified" placeholder="ID Verified">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <mat-form-field class="voice-full-width">
+          <input [(ngModel)]="model.serviceNumber" name="serviceNumber" matInput placeholder="Service Number" >
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+      <mat-card>
+        <mat-card-title>{{ title }} Template Preview</mat-card-title>
+          <mat-card-content>
+            <mat-form-field class="voice-full-width">
+              <textarea #voicefeature matInput matTextareaAutosize readonly>Feature Requested: {{model.featureAdded}}
+
+Customer Agreed to Cost of Feature?: {{model.cost}}
+
+Feature added in CRM?: {{model.crm}}
+
+Feature Requested to be Removed: {{model.featureRemoved}}
+
+ID Verified: {{model.verified}} 
+
+Service Number: {{model.serviceNumber}}</textarea>
+            </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button [ngxClipboard]='voicefeature'>COPY</button>
+            <button mat-button (click)="reset()">CLEAR</button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+</div>

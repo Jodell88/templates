@@ -33,6 +33,7 @@ import { HeaderbarComponent } from './headerbar/headerbar.component';
 import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { PricingListComponent } from './pricing-list/pricing-list.component';
+import { VoiceFeaturesComponent } from './voice-features/voice-features.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PricingListComponent } from './pricing-list/pricing-list.component';
     HeaderbarComponent,
     HomeComponent,
     ContactListComponent,
-    PricingListComponent
+    PricingListComponent,
+    VoiceFeaturesComponent
   ],
   imports: [
     BrowserModule,
@@ -119,6 +121,10 @@ import { PricingListComponent } from './pricing-list/pricing-list.component';
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'voicefeatures',
+        component: VoiceFeaturesComponent
       },
 
     ]),
