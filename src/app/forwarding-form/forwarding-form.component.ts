@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 export class Forwarding {
   constructor(
     public ipaddress: string,
+    public lan?: string,
     public ports?: string,
     public connectedONT?: string,
     public dmz?: string,
@@ -31,5 +32,7 @@ export class ForwardingFormComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  lans = ["LAN 1", "LAN 2", "LAN 3", "LAN 4"];
 
 }
