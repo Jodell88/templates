@@ -16,6 +16,7 @@ const TEMPLATES: Template[] = [
   {name: 'Rebate Request', url: '/rebate'},
   {name: 'Relocation', url: '/relocation'},
   {name: 'Retention', url: '/retention'},
+  {name: 'Security', url: '/security'},
   {name: 'Technical', url: '/technical'},
   {name: 'Upgrade/Downgrade', url: '/upgradedowngrade'},
   {name: 'Voice Features', url: '/voicefeatures'},

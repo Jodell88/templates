@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule, MatToolbarModule,
          MatSidenavModule, MatListModule, MatInputModule, MatCardModule, MatDatepickerModule,
          MatNativeDateModule, MatSlideToggleModule, DateAdapter, MatTooltipModule, MatIconModule,
-         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule } from '@angular/material';
+         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule, MatRadioModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
@@ -34,6 +34,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { PricingListComponent } from './pricing-list/pricing-list.component';
 import { VoiceFeaturesComponent } from './voice-features/voice-features.component';
+import { SecurityComponent } from './security/security.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { VoiceFeaturesComponent } from './voice-features/voice-features.componen
     HomeComponent,
     ContactListComponent,
     PricingListComponent,
-    VoiceFeaturesComponent
+    VoiceFeaturesComponent,
+    SecurityComponent
   ],
   imports: [
     BrowserModule,
@@ -126,6 +128,10 @@ import { VoiceFeaturesComponent } from './voice-features/voice-features.componen
         path: 'voicefeatures',
         component: VoiceFeaturesComponent
       },
+      {
+        path: 'security',
+        component: SecurityComponent
+      },
 
     ]),
     BrowserAnimationsModule,
@@ -133,7 +139,7 @@ import { VoiceFeaturesComponent } from './voice-features/voice-features.componen
     MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule,
     MatCardModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule,
     MatTooltipModule, MatIconModule, MatMenuModule, MatAutocompleteModule, MatDialogModule,
-    MatExpansionModule, MatTableModule
+    MatExpansionModule, MatTableModule, MatRadioModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},

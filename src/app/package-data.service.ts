@@ -60,7 +60,7 @@ export class PackageDataService {
     {name: "Surf It All, Watch More with PVR 9000", value: 945.00},
     {name: "Surf It All, Watch A Lot", value: 1025.00},
     {name: "Surf It All, Watch A Lot More", value: 1125.00},
-    {name: "Surf It All, Watch It All", value: 1275.00}
+    {name: "Surf It All Plus, Watch It All", value: 1275.00},
 
   ]
 
