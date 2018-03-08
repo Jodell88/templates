@@ -12,18 +12,21 @@
       </div>
     </div>
     <div fxLayout="row">
-      <div fxFlex="49%">
+      <div fxFlex="100%">
         <!-- <mat-form-field class="updown-full-width">
           <input [(ngModel)]="model.newBundle" name="newBundle" matInput placeholder="New Package Requested" >
         </mat-form-field> -->
         <mat-form-field class="updown-full-width">
-          <input [(ngModel)]="model.newBundle" name="newBundle" matInput placeholder="New Package Requested" [matAutocomplete]="requested">
-          <mat-autocomplete #requested="matAutocomplete">
+            <input [(ngModel)]="model.newBundle" name="newBundle" matInput placeholder="New Package Requested">
+          <!-- <input [(ngModel)]="model.newBundle" name="newBundle" matInput placeholder="New Package Requested" [matAutocomplete]="requested"> -->
+          <!-- <mat-autocomplete #requested="matAutocomplete">
               <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
-          </mat-autocomplete>
+          </mat-autocomplete> -->
         </mat-form-field>
-      </div>
-      <div fxFlexOffset="2%" fxFlex="49%">
+      </div>      
+    </div>
+    <div>
+      <div fxFlex="100%">
         <mat-form-field class="updown-full-width">
           <mat-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additional Packages (Movies, etc)" >
             <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>

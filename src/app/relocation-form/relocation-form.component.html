@@ -20,34 +20,40 @@
         </div>
       </div>
       <div fxLayout="row">
-        <div fxFlex="49%">
+        <div fxFlex="100%">
           <mat-form-field class="relocation-full-width">
-            <input [(ngModel)]="model.oldPackage" name="oldPackage" matInput placeholder="Existing Package" [matAutocomplete]="existing">
-            <mat-autocomplete #existing="matAutocomplete">
+              <input [(ngModel)]="model.oldPackage" name="oldPackage" matInput placeholder="Existing Package">
+            <!-- <input [(ngModel)]="model.oldPackage" name="oldPackage" matInput placeholder="Existing Package" [matAutocomplete]="existing"> -->
+            <!-- <mat-autocomplete #existing="matAutocomplete">
                 <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
-            </mat-autocomplete>
+            </mat-autocomplete> -->
           </mat-form-field>
         </div>
-        <div fxFlexOffset="2%" fxFlex="49%">
+      </div>
+      <div fxLayout="row">
+        <div fxFlex="100%">
           <mat-form-field class="relocation-full-width">
-            <mat-select multiple [(ngModel)]="model.oldAddons" name="oldAddons" placeholder="Add-on Packages">
+            <mat-select multiple [(ngModel)]="model.oldAddons" name="oldAddons" placeholder="Existing Add-on Packages">
               <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
       </div>
       <div fxLayout="row">
-        <div fxFlex="49%">
+        <div fxFlex="100%">
           <mat-form-field class="relocation-full-width">
-            <input [(ngModel)]="model.newPackage" name="newPackage" matInput placeholder="New Package Requested" [matAutocomplete]="requested">
-            <mat-autocomplete #requested="matAutocomplete">
+              <input [(ngModel)]="model.newPackage" name="newPackage" matInput placeholder="New Package Requested">
+            <!-- <input [(ngModel)]="model.newPackage" name="newPackage" matInput placeholder="New Package Requested" [matAutocomplete]="requested"> -->
+            <!-- <mat-autocomplete #requested="matAutocomplete">
                 <mat-option *ngFor="let package of packages" [value]="package.name">{{ package.name }}</mat-option>
-            </mat-autocomplete>
+            </mat-autocomplete> -->
           </mat-form-field>
         </div>
-        <div fxFlexOffset="2%" fxFlex="49%">
+      </div>
+      <div fxLayout="row">
+        <div fxFlex="100%">
           <mat-form-field class="relocation-full-width">
-            <mat-select multiple [(ngModel)]="model.newAddons" name="newAddons" placeholder="Add-on Packages">
+            <mat-select multiple [(ngModel)]="model.newAddons" name="newAddons" placeholder="New package Add-on Packages">
               <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
             </mat-select>
           </mat-form-field>

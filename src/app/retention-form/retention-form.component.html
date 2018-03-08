@@ -5,19 +5,19 @@
 <div fxLayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
-      <div fxFlex="49%">
+      <div fxFlex="100%">
         <mat-form-field class="retention-full-width">
           <input [(ngModel)]="model.existingPackage" name="package" matInput placeholder="Existing Package">
-        </mat-form-field>
-      </div>
-      <div fxFlexOffset="2%" fxFlex="49%">
-        <mat-form-field class="retention-full-width">
-          <input [(ngModel)]="model.promotion" name="promotion" matInput placeholder="Promotion Applied" >
         </mat-form-field>
       </div>
     </div>
     <div fxLayout="row">
       <div fxFlex="49%">
+        <mat-form-field class="retention-full-width">
+          <input [(ngModel)]="model.promotion" name="promotion" matInput placeholder="Promotion Applied" >
+        </mat-form-field>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="49%">
         <mat-form-field class="retention-full-width">
           <input [(ngModel)]="model.balance" name="balance" matInput placeholder="Outstanding Figure (from tableau)">
         </mat-form-field>
