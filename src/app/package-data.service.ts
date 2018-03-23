@@ -97,4 +97,11 @@ export class PackageDataService {
     {name: "Voice Conference package with Return Call", price: 18 * this.VAT, interval: "Month", description: "Package with 4 features of Return call, Call waiting, 3 way calling and Call forwarding"},  
   ]
 
+SECURE = [
+  {name: "Silver"},
+  {name: "Silver with Rapid Response"},
+  {name: "Gold"},
+  {name: "Gold with Rapid Response"},
+]
+
 }
