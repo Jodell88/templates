@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule, MatToolbarModule,
          MatSidenavModule, MatListModule, MatInputModule, MatCardModule, MatDatepickerModule,
          MatNativeDateModule, MatSlideToggleModule, DateAdapter, MatTooltipModule, MatIconModule,
-         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule, MatRadioModule } from '@angular/material';
+         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule, MatRadioModule, 
+         MatTabsModule, MatDividerModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClipboardModule } from 'ngx-clipboard';
@@ -35,6 +36,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { PricingListComponent } from './pricing-list/pricing-list.component';
 import { VoiceFeaturesComponent } from './voice-features/voice-features.component';
 import { SecurityComponent } from './security/security.component';
+import { TechnicalVoiceComponent } from './technical-voice/technical-voice.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { SecurityComponent } from './security/security.component';
     ContactListComponent,
     PricingListComponent,
     VoiceFeaturesComponent,
-    SecurityComponent
+    SecurityComponent,
+    TechnicalVoiceComponent
   ],
   imports: [
     BrowserModule,
@@ -139,7 +142,7 @@ import { SecurityComponent } from './security/security.component';
     MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule,
     MatCardModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule,
     MatTooltipModule, MatIconModule, MatMenuModule, MatAutocompleteModule, MatDialogModule,
-    MatExpansionModule, MatTableModule, MatRadioModule
+    MatExpansionModule, MatTableModule, MatRadioModule, MatTabsModule, MatDividerModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'en-GB'},

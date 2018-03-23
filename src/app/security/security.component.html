@@ -1,3 +1,134 @@
-<p>
-  security works!
-</p>
+<headerbar>
+    <span title>{{title}}</span>
+  </headerbar>
+<br>
+<div fxLayout="row">
+  <div fxFlexOffset="5%" fxFlex="45%">
+    <mat-tab-group dynamicHeight="true">
+      <mat-tab label="Template">
+        <br>
+        <div fxLayout="row">
+          <div fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <input matInput [(ngModel)]="model.date" name="currentdate" [matDatepicker]="currentDatepicker" placeholder="Current Date">
+              <mat-datepicker-toggle matSuffix [for]="currentDatepicker"></mat-datepicker-toggle>
+              <mat-datepicker #currentDatepicker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div fxFlexOffset="2%" fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <input [(ngModel)]="model.account" name="account" matInput placeholder="Account Number" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="49%">
+            <mat-form-field class="security-full-width">
+                <input [(ngModel)]="model.name" name="name" matInput placeholder="Customer's Name" >
+              </mat-form-field>
+          </div>
+          <div fxFlexOffset="2%" fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <input [(ngModel)]="model.address" name="address" matInput placeholder="Address" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="49%">
+            <mat-form-field class="security-full-width">
+                <input [(ngModel)]="model.contactName" name="contactName" matInput placeholder="Contact Name" >
+              </mat-form-field>
+          </div>
+          <div fxFlexOffset="2%" fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <input [(ngModel)]="model.id" name="id" matInput placeholder="Identification Number" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+            <div fxFlex="49%">
+              <mat-form-field class="security-full-width">
+                  <input [(ngModel)]="model.primaryContact" name="primaryContact" matInput placeholder="Primary Contact Number" >
+                </mat-form-field>
+            </div>
+            <div fxFlexOffset="2%" fxFlex="49%">
+              <mat-form-field class="security-full-width">
+                <input [(ngModel)]="model.secondaryContact" name="secondaryContact" matInput placeholder="Other Contact Numbers" >
+              </mat-form-field>
+            </div>
+          </div>
+        <div fxLayout="row">
+          <div fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <mat-select [(ngModel)]="model.product" name="product" placeholder="Product">
+                <mat-option *ngFor="let product of products" [value]="product.name">{{ product.name }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxFlexOffset="2%" fxFlex="49%">
+            <mat-form-field class="security-full-width">
+              <input [(ngModel)]="model.coordinates" name="gps" matInput placeholder="GPS Coordinates" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <mat-form-field class="security-full-width">
+            <textarea matInput matTextareaAutosize [(ngModel)]="model.installDetails" name="details" placeholder="Installation Request Details"></textarea>
+          </mat-form-field>
+        </div>
+        <br>
+        <div fxLayout="column">
+          <h4 class="mat-h4">Billing Cycle</h4>
+          <mat-radio-group class="security-radio-group" [(ngModel)]="model.cycle">
+            <mat-radio-button class="security-radio-button" *ngFor="let cycle of cycles" [value]="cycle.value">
+              {{cycle.value}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </mat-tab>
+      <mat-tab label="Information">
+          <div class="security-tab-content">
+              <p>Case Title: Security Installation Request</p>
+              <p>Case Type: Security Installation</p>                   
+              <p>Assign to: Sales Admin</p>
+            </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div fxFlexOffset="5%" fxFlex="44%">
+      <mat-card>
+        <mat-card-title>{{title}} Template Preview</mat-card-title>
+        <mat-card-content>
+          <mat-form-field class="security-full-width">
+            <textarea #security matInput matTextareaAutosize readonly>Date Stamp: {{model.date | date: 'mediumDate'}}
+
+CRM #: {{model.account}}
+                  
+Customer Name: {{model.name}}
+                  
+Address: {{model.address}}
+                  
+ID #: {{model.id}}
+                  
+Primary Contact Name: {{model.contactName}}
+                  
+Primary Contact #: {{model.primaryContact}}
+  
+Contact: {{model.secondaryContact}}
+  
+Product: {{model.product}}
+  
+Installation Request Details: {{model.installDetails}}
+
+GPS Coordinates: {{model.coordinates}}
+  
+Billing Cycle: {{model.cycle}}</textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [ngxClipboard]='security'>COPY</button>
+          <button mat-button (click)="reset()">CLEAR</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+</div>

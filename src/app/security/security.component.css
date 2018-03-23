@@ -1,0 +1,22 @@
+.security-full-width {
+    width: 100%;
+  }
+
+  .security-tab-content {
+    padding: 16px;
+  }
+
+  security-radio-group {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  
+  .security-radio-button {
+    /* width: 80%; */
+    margin-right: 40px;
+  }
+  
+  .security-selected-value {
+    margin: 50px 0;
+  }
+  
