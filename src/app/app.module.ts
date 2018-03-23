@@ -135,6 +135,10 @@ import { TechnicalVoiceComponent } from './technical-voice/technical-voice.compo
         path: 'security',
         component: SecurityComponent
       },
+      {
+        path: 'technical-voice',
+        component: TechnicalVoiceComponent
+      },
 
     ]),
     BrowserAnimationsModule,
