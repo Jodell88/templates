@@ -28,6 +28,8 @@ export class TechnicalVoiceComponent implements OnInit {
 
   title = "Voice Technical"
   model = new TechVoice
+  options = ["No", "Yes"]
+
   constructor() { }
 
   ngOnInit() {

@@ -4,34 +4,31 @@
 <br>
 <div fxLayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
-    <div fxLayout="column">
-      <mat-slide-toggle [(ngModel)]="model.software">Does the ONT has the latest software 3FE56773AFHA98?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.xml">Is the xml file on the ONT (seen on AMS as SN.xml)?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.preconfig">Is the preconfig file on the ONT (PREMASSY004)?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.pots">Is the POTs port created on the AMS?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.mac">Is a mac address learned under the virtual UNI?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.dhcp">Is a DHCP IP assigned?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.tel1">Is the phone connected to TEL1?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.handset">What is seen on the handset?</mat-slide-toggle>
-      <br>
+    <div fxLayout="column">      
+      <mat-slide-toggle [(ngModel)]="model.software" class="tech-slider">Does the ONT have the latest software 3FE56773AFHA98?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.xml" class="tech-slider">Is the xml file on the ONT (seen on AMS as SN.xml)?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.preconfig" class="tech-slider">Is the preconfig file on the ONT (PREMASSY004)?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.pots" class="tech-slider">Is the POTs port created on the AMS?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.mac" class="tech-slider">Is a mac address learned under the virtual UNI?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.dhcp" class="tech-slider">Is a DHCP IP assigned?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.tel1" class="tech-slider">Is the phone connected to TEL1?</mat-slide-toggle>
+      <!-- <mat-slide-toggle [(ngModel)]="model.handset">What is seen on the handset?</mat-slide-toggle> -->
+      <mat-form-field>
+        <textarea [(ngModel)]="model.handset" matInput placeholder="What is seen on the handset?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      
       <mat-slide-toggle [(ngModel)]="model.registered">Is the phone number registered on the ONT GUI?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.make">Could the customer make calls from the phone?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.receive">Could the customer receive calls on the phone?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.dunned">Is the customer listed as DUNNED?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.uni">Was the Virtual UNI Locked and Unlocked?</mat-slide-toggle>
-      <br>
-      <mat-slide-toggle [(ngModel)]="model.voip">Was the VoIP Service Locked and Unlocked?</mat-slide-toggle>
+      <!-- <mat-slide-toggle [(ngModel)]="model.make">Could the customer make calls from the phone?</mat-slide-toggle> -->
+      <mat-form-field>
+        <textarea [(ngModel)]="model.make" matInput placeholder="Could the customer make calls from the phone?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      <!-- <mat-slide-toggle [(ngModel)]="model.receive">Could the customer receive calls on the phone?</mat-slide-toggle> -->
+      <mat-form-field>
+        <textarea [(ngModel)]="model.receive" matInput placeholder="Could the customer receive calls on the phone?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      <mat-slide-toggle [(ngModel)]="model.dunned" class="tech-slider">Is the customer listed as DUNNED?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.uni" class="tech-slider">Was the Virtual UNI Locked and Unlocked?</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="model.voip" class="tech-slider">Was the VOIP Service Locked and Unlocked?</mat-slide-toggle>
     </div>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">
@@ -39,7 +36,7 @@
       <mat-card-title>{{title}} Template Preview</mat-card-title>
       <mat-card-content>
         <mat-form-field class="tech-voice-full-width">
-          <textarea #security matInput matTextareaAutosize readonly>1. Does the ONT has the latest software 3FE56773AFHA98?: {{model.software}}
+          <textarea #security matInput matTextareaAutosize readonly>1. Does the ONT have the latest software 3FE56773AFHA98?: {{model.software}}
 
 2. Is the xml file on the ONT (seen on AMS as SN.xml)?: {{model.xml}}
 
@@ -65,7 +62,7 @@
 
 13. Was the Virtual UNI Locked and Unlocked?: {{model.uni}}
 
-14. Was the VoIP Service Locked and Unlocked?: {{model.voip}}</textarea>
+14. Was the VOIP Service Locked and Unlocked?: {{model.voip}}</textarea>
         </mat-form-field>
       </mat-card-content>
       <mat-card-actions>
