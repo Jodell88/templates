@@ -36,6 +36,8 @@ export class TechnicalFormComponent implements OnInit {
 
   model = new Technical("", "", "")
 
+  password = "f1r3b0x@3ng"
+
   reset() {
     this.model = new Technical("", "", "")
   }

@@ -148,8 +148,16 @@ Attachments: {{model.attachments}}
       <mat-card-actions>
         <button mat-button [ngxClipboard]='technical'>COPY</button>
         <button mat-button (click)="reset()">CLEAR</button>
+        <button mat-button [ngxClipboard]='pw'>NOTHING TO SEE HERE</button>
       </mat-card-actions>
     </mat-card>
-
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        
+      </div>
+      </div>
   </div>
 </div>
+<mat-form-field class="offscreen" aria-hidden=true>
+  <input #pw name="card" matInput value={{password}} aria-hidden=true>
+</mat-form-field>
