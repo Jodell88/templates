@@ -28,7 +28,10 @@
         <textarea matInput matTextareaAutosize [(ngModel)]="model.internet" name="internet" placeholder="Internet Only"></textarea>
       </mat-form-field>
       <mat-form-field class="csp-full-width">
-        <textarea matInput matTextareaAutosize [(ngModel)]="model.both" name="both" placeholder="Both IPTV and Internet"></textarea>
+        <textarea matInput matTextareaAutosize [(ngModel)]="model.voice" name="voice" placeholder="Voice Only"></textarea>
+      </mat-form-field>
+      <mat-form-field class="csp-full-width">
+        <textarea matInput matTextareaAutosize [(ngModel)]="model.both" name="both" placeholder="Issues with multiple services"></textarea>
       </mat-form-field>
       <mat-form-field class="csp-full-width">
         <textarea matInput matTextareaAutosize [(ngModel)]="model.info" name="info" placeholder="Additional Info"></textarea>
@@ -48,7 +51,9 @@ IPTV Only: {{model.iptv}}
 
 Internet Only: {{model.internet}}
 
-Both IPTV and Internet: {{model.both}}
+Voice Only: {{model.voice}}
+
+Issues with multiple services: {{model.both}}
 
 Additional Info: {{model.info}}
           </textarea>

@@ -6,6 +6,7 @@ export class Csp {
     public date?: string,
     public iptv?: string,
     public internet?: string,
+    public voice?: string,
     public info?: string,
     public both?: string
   ){}
@@ -24,7 +25,8 @@ export class CspFormComponent implements OnInit {
 
   serviceIssues = [
     {value: 'Internet'},
-    {value: 'IPTV'}
+    {value: 'IPTV'},
+    {value: 'Voice'}
   ]
 
   reset() {

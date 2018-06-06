@@ -5,30 +5,114 @@
 <div fxLayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="column">      
-      <mat-slide-toggle [(ngModel)]="model.software" class="tech-slider">Does the ONT have the latest software 3FE56773AFHA98?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.xml" class="tech-slider">Is the xml file on the ONT (seen on AMS as SN.xml)?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.preconfig" class="tech-slider">Is the preconfig file on the ONT (PREMASSY004)?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.pots" class="tech-slider">Is the POTs port created on the AMS?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.mac" class="tech-slider">Is a mac address learned under the virtual UNI?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.dhcp" class="tech-slider">Is a DHCP IP assigned?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.tel1" class="tech-slider">Is the phone connected to TEL1?</mat-slide-toggle>
-      <!-- <mat-slide-toggle [(ngModel)]="model.handset">What is seen on the handset?</mat-slide-toggle> -->
+      <div fxLayout="column">
+        <h4 class="mat-h4">Does the ONT have the latest software 3FE56773AFHA98?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.software">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the xml file on the ONT (seen on AMS as SN.xml)?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.xml">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the preconfig file on the ONT (PREMASSY004)?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.preconfig">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the POTs port created on the AMS?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.pots">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is a mac address learned under the virtual UNI?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.mac">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is a DHCP IP assigned?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.dhcp">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the phone connected to TEL1?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.tel1">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
       <mat-form-field>
         <textarea [(ngModel)]="model.handset" matInput placeholder="What is seen on the handset?" matTextareaAutosize></textarea>
-      </mat-form-field>
-      
-      <mat-slide-toggle [(ngModel)]="model.registered">Is the phone number registered on the ONT GUI?</mat-slide-toggle>
-      <!-- <mat-slide-toggle [(ngModel)]="model.make">Could the customer make calls from the phone?</mat-slide-toggle> -->
+      </mat-form-field>      
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the phone number registered on the ONT GUI?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.registered">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
       <mat-form-field>
         <textarea [(ngModel)]="model.make" matInput placeholder="Could the customer make calls from the phone?" matTextareaAutosize></textarea>
       </mat-form-field>
-      <!-- <mat-slide-toggle [(ngModel)]="model.receive">Could the customer receive calls on the phone?</mat-slide-toggle> -->
       <mat-form-field>
         <textarea [(ngModel)]="model.receive" matInput placeholder="Could the customer receive calls on the phone?" matTextareaAutosize></textarea>
       </mat-form-field>
-      <mat-slide-toggle [(ngModel)]="model.dunned" class="tech-slider">Is the customer listed as DUNNED?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.uni" class="tech-slider">Was the Virtual UNI Locked and Unlocked?</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="model.voip" class="tech-slider">Was the VOIP Service Locked and Unlocked?</mat-slide-toggle>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Is the customer listed as DUNNED?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.dunned">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Was the Virtual UNI Locked and Unlocked?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.uni">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+        <h4 class="mat-h4">Was the VOIP Service Locked and Unlocked?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.voip">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
     </div>
   </div>
   <div fxFlexOffset="5%" fxFlex="44%">

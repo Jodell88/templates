@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSelectModule, MatGridListModule, MatToolbarModule,
          MatSidenavModule, MatListModule, MatInputModule, MatCardModule, MatDatepickerModule,
          MatNativeDateModule, MatSlideToggleModule, DateAdapter, MatTooltipModule, MatIconModule,
-         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule, MatRadioModule, 
+         MatMenuModule, MatAutocompleteModule, MatExpansionModule, MatTableModule, MatRadioModule,
          MatTabsModule, MatDividerModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';

@@ -5,16 +5,23 @@
 <div fxLayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
     <div fxLayout="row">
-      <div fxFlex="49%">
+      <div fxFlex="33%">
         <mat-form-field class="technical-full-width">
-          <mat-select [(ngModel)]="model.internet" name="internet" placeholder="Is the Internet service affected?">
+          <mat-select [(ngModel)]="model.internet" name="internet" placeholder="Internet affected?">
             <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
-      <div fxFlexOffset="2%" fxFlex="49%">
+      <div fxFlexOffset="2%" fxFlex="31%">
         <mat-form-field class="technical-full-width">
-          <mat-select [(ngModel)]="model.iptv" name="iptv" placeholder="Is the IPTV service affected?">
+          <mat-select [(ngModel)]="model.iptv" name="iptv" placeholder="IPTV affected?">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlexOffset="2%" fxFlex="31%">
+        <mat-form-field class="technical-full-width">
+          <mat-select [(ngModel)]="model.voice" name="voice" placeholder="Voice affected?">
             <mat-option *ngFor="let option of options" [value]="option.value">{{ option.value }}</mat-option>
           </mat-select>
         </mat-form-field>
@@ -66,6 +73,9 @@
       <textarea matInput matTextareaAutosize [(ngModel)]="model.alarms" name="alarms" placeholder="Tableau / Alarm Analysis"></textarea>
     </mat-form-field>
     <mat-form-field class="technical-full-width">
+      <textarea matInput matTextareaAutosize [(ngModel)]="model.bundle" name="bundle" placeholder="Bundle number if customer has service in more than one location"></textarea>
+    </mat-form-field>
+    <mat-form-field class="technical-full-width">
       <textarea matInput matTextareaAutosize [(ngModel)]="model.attachments" name="attachments" placeholder="Attachments (DLO/AMSLogs screenshots)"></textarea>
     </mat-form-field>
     <h4 class="mat-h4">Customer network setup details:</h4>
@@ -115,6 +125,8 @@
 
 Is the IPTV service affected?: {{model.iptv}}
 
+Is the Voice Service affected?: {{model.voice}}
+
 Description of the issue: {{model.description}}
 
 Date when the issue first surfaced: {{model.date | date: 'mediumDate'}}
@@ -124,6 +136,8 @@ Steps taken to resolve the issue: {{model.steps}}
 Results of the steps taken: {{model.results}}
 
 ONT Serial Number: {{model.serial}}
+
+Bundle Number: {{model.bundle}}
 
 STB MAC Information: {{model.stb}}
 

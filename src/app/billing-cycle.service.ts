@@ -7,7 +7,8 @@ export class BillingCycleService {
 
   cycles = [
     {value: "2nd to 1st"},
-    {value: "16th to 15th"}
+    {value: "16th to 15th"},
+    {value: "25th to 24th"}
   ]
 
 }
