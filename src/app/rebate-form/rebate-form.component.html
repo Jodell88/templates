@@ -26,7 +26,7 @@
       <div fxFlexOffset="2%" fxFlex="49%">
         <mat-form-field class="rebate-full-width">
           <mat-select multiple [(ngModel)]="model.addons" name="addons" placeholder="Additonal Packages (Movies, etc)">
-            <mat-option *ngFor="let addon of addons" [value]="addon">{{ addon.name }}</mat-option>
+            <mat-option *ngFor="let addon of addons" [value]="addon.name">{{ addon.name }}</mat-option>
           </mat-select>
       </mat-form-field>
       </div>
