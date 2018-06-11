@@ -4,7 +4,35 @@
 <br>
 <div fxLayout="row">
   <div fxFlexOffset="5%" fxFlex="45%">
-    <div fxLayout="column">      
+    <div fxLayout="column">
+      <div fxLayout='row'>
+        <div fxFlex='49%'>
+          <mat-form-field class="tech-voice-full-width">
+            <input matInput  [(ngModel)]="model.serial" name="serial" placeholder="ONT Serial Number">
+          </mat-form-field>
+        </div>
+        <div fxFlex='49%' fxFlexOffset='2%'>
+          <mat-form-field class="tech-voice-full-width">
+            <input matInput  [(ngModel)]="model.phoneNumber" name="phonenumber" placeholder="Customer’s Provisioned Number">
+          </mat-form-field>
+        </div>
+      </div>
+      <mat-form-field>
+        <textarea [(ngModel)]="model.handset" matInput placeholder="What is seen on the handset?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea [(ngModel)]="model.make" matInput placeholder="Could the customer make calls from the phone?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea [(ngModel)]="model.receive" matInput placeholder="Could the customer receive calls on the phone?" matTextareaAutosize></textarea>
+      </mat-form-field>
+      <div fxFlexOffset="2%" fxFlex="49%">
+        <mat-form-field class="tech-voice-full-width">
+          <mat-select [(ngModel)]="model.phoneType" name="phoneTypes" placeholder="Type of Phone (Cordless or Corded)" >
+            <mat-option *ngFor="let type of phoneType" [value]="type">{{ type }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>    
       <div fxLayout="column">
         <h4 class="mat-h4">Does the ONT have the latest software 3FE56773AFHA98?</h4>
         <mat-radio-group class="voice-radio-group" [(ngModel)]="model.software">
@@ -15,6 +43,32 @@
       </div>
       <br>
       <div fxLayout="column">
+        <h4 class="mat-h4">Is the phone connected to TEL1?</h4>
+        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.tel1">
+          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div fxLayout="column">
+          <h4 class="mat-h4">Is the customer listed as DUNNED?</h4>
+          <mat-radio-group class="voice-radio-group" [(ngModel)]="model.dunned">
+            <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div fxLayout="column">
+            <h4 class="mat-h4">Is the phone number registered on the ONT GUI?</h4>
+            <mat-radio-group class="voice-radio-group" [(ngModel)]="model.registered">
+              <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+      <!-- <div fxLayout="column">
         <h4 class="mat-h4">Is the xml file on the ONT (seen on AMS as SN.xml)?</h4>
         <mat-radio-group class="voice-radio-group" [(ngModel)]="model.xml">
           <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
@@ -58,42 +112,13 @@
           </mat-radio-button>
         </mat-radio-group>
       </div>
+      
       <br>
-      <div fxLayout="column">
-        <h4 class="mat-h4">Is the phone connected to TEL1?</h4>
-        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.tel1">
-          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </div>
+            
+     
       <br>
-      <mat-form-field>
-        <textarea [(ngModel)]="model.handset" matInput placeholder="What is seen on the handset?" matTextareaAutosize></textarea>
-      </mat-form-field>      
-      <div fxLayout="column">
-        <h4 class="mat-h4">Is the phone number registered on the ONT GUI?</h4>
-        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.registered">
-          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </div>
-      <br>
-      <mat-form-field>
-        <textarea [(ngModel)]="model.make" matInput placeholder="Could the customer make calls from the phone?" matTextareaAutosize></textarea>
-      </mat-form-field>
-      <mat-form-field>
-        <textarea [(ngModel)]="model.receive" matInput placeholder="Could the customer receive calls on the phone?" matTextareaAutosize></textarea>
-      </mat-form-field>
-      <div fxLayout="column">
-        <h4 class="mat-h4">Is the customer listed as DUNNED?</h4>
-        <mat-radio-group class="voice-radio-group" [(ngModel)]="model.dunned">
-          <mat-radio-button class="voice-radio-button" *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </div>
+      
+      
       <br>
       <div fxLayout="column">
         <h4 class="mat-h4">Was the Virtual UNI Locked and Unlocked?</h4>
@@ -112,41 +137,48 @@
           </mat-radio-button>
         </mat-radio-group>
       </div>
-      <br>
-    </div>
+      <br> -->
+    
   </div>
+</div>
   <div fxFlexOffset="5%" fxFlex="44%">
     <mat-card>
       <mat-card-title>{{title}} Template Preview</mat-card-title>
       <mat-card-content>
         <mat-form-field class="tech-voice-full-width">
-          <textarea #security matInput matTextareaAutosize readonly>1. Does the ONT have the latest software 3FE56773AFHA98?: {{model.software}}
+          <textarea #security matInput matTextareaAutosize readonly>1. ONT Serial Number: {{model.serial}}
 
-2. Is the xml file on the ONT (seen on AMS as SN.xml)?: {{model.xml}}
+2. Does the ONT have the latest software 3FE56773AFHA98?: {{model.software}}
 
-3. Is the preconfig file on the ONT (PREMASSY004)?: {{model.preconfig}}
+3. Is the phone connected to TEL1?: {{model.tel1}}
 
-4. Is the POTs port created on the AMS?: {{model.pots}}
+4. What is seen on the handset?: {{model.handset}}
 
-5. Is a mac address learned under the virtual UNI?: {{model.mac}}
+5. Is the phone number registered on the ONT GUI?: {{model.registered}}
 
-6. Is a DHCP IP assigned?: {{model.dhcp}}
+6. Could the customer make calls from the phone?: {{model.make}}
 
-7. Is the phone connected to TEL1?: {{model.tel1}}
+7. Could the customer receive calls on the phone?: {{model.receive}}
 
-8. What is seen on the handset?: {{model.handset}}
+8. Is the customer listed as DUNNED?: {{model.dunned}}
 
-9. Is the phone number registered on the ONT GUI?: {{model.registered}}
+9. Type of Phone (Cordless or corded)?: {{model.phoneType}}
 
-10. Could the customer make calls from the phone?: {{model.make}}
+10. Customer’s Provisioned Number: {{model.phoneNumber}}
 
-11. Could the customer receive calls on the phone?: {{model.receive}}
+11. Is the preconfig file on the ONT (PREMASSY004)?: {{model.preconfig}}
 
-12. Is the customer listed as DUNNED?: {{model.dunned}}
+12. Is the xml file on the ONT (seen on AMS as SN.xml)?: {{model.xml}}
 
-13. Was the Virtual UNI Locked and Unlocked?: {{model.uni}}
+13. Is the POTs port created on the AMS?: {{model.pots}}
 
-14. Was the VOIP Service Locked and Unlocked?: {{model.voip}}</textarea>
+14. Is a mac address learned under the virtual UNI?: {{model.mac}}
+
+15. Is a DHCP IP assigned?: {{model.dhcp}}
+
+16. Was the Virtual UNI Locked and Unlocked?: {{model.uni}}
+
+17. Was the VOIP Service Locked and Unlocked?: {{model.voip}}</textarea>
         </mat-form-field>
       </mat-card-content>
       <mat-card-actions>

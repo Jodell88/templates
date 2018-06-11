@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class TechVoice{
   constructor(
+    public serial?: string,
+    public phoneType?: string,
+    public phoneNumber?: string,
     public software?: string,
     public xml?: string,
     public preconfig?: number,
@@ -16,7 +19,7 @@ export class TechVoice{
     public dunned?: string,
     public uni?: string,
     public voip?: string,
-  ){}
+  ) {}
 }
 
 @Component({
@@ -26,16 +29,18 @@ export class TechVoice{
 })
 export class TechnicalVoiceComponent implements OnInit {
 
-  title = "Voice Technical"
-  model = new TechVoice
-  options = ["No", "Yes"]
+  title = 'Voice Technical'
+  model = new TechVoice();
+  options = ['No', 'Yes'];
+  phoneType = ['VTech cordless - AMPLIA supplied', 'bMobile corded - AMPLIA supplied',
+              'Personal Device - wireless', 'Personal Device - wired'];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  reset(){
+  reset() {
     this.model = new TechVoice()
   }
 }
